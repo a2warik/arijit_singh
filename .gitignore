@@ -1,3 +1,4 @@
 *.py
 *.db
 index_template.html
+__pycache__
