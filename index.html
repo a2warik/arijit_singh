@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Arijit Singh Archive — every song, every year</title>
+<meta name="description" content="A searchable archive of Bollywood songs sung by Arijit Singh, with film, year, co-vocalists, lyricist and composer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#150910;
+    --panel:#221019;
+    --panel-2:#2b1420;
+    --line:rgba(245,233,220,0.12);
+    --line-strong:rgba(245,233,220,0.22);
+    --gold:#d8a64b;
+    --gold-soft:#e9c785;
+    --rose:#c25a6d;
+    --ink:#f5ecdf;
+    --ink-muted:#b9a89c;
+    --ink-faint:#7d6b62;
+    --shadow:0 20px 60px rgba(0,0,0,0.45);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--void);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold); color:#1a0d12;}
+
+  a{color:inherit;}
+
+  /* ---------- texture ---------- */
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:2;
+    opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- top bar ---------- */
+  header.top{
+    position:sticky; top:0; z-index:20;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px clamp(20px,5vw,64px);
+    background:rgba(21,9,16,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+    letter-spacing:0.01em;
+  }
+  .brand .dot{width:7px;height:7px;border-radius:50%;background:var(--gold); box-shadow:0 0 10px var(--gold);}
+  .top nav{display:flex; gap:28px; font-size:0.82rem; color:var(--ink-muted); letter-spacing:0.06em; text-transform:uppercase;}
+  .top nav a{text-decoration:none; transition:color .2s;}
+  .top nav a:hover{color:var(--gold-soft);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:clamp(70px,12vw,130px) clamp(20px,6vw,64px) 60px;
+    overflow:hidden;
+    text-align:center;
+    background:
+      radial-gradient(60% 55% at 50% 18%, rgba(216,166,75,0.16), transparent 70%),
+      radial-gradient(80% 60% at 50% 100%, rgba(194,90,109,0.10), transparent 70%);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; left:50%; top:8%;
+    width:640px; height:640px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(216,166,75,0.14) 0%, transparent 62%);
+    filter:blur(10px);
+    pointer-events:none;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-soft);
+    border:1px solid var(--line-strong);
+    padding:6px 14px; border-radius:999px;
+    margin-bottom:28px;
+    position:relative; z-index:1;
+  }
+  .eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--gold); animation:pulse 2.2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1; box-shadow:0 0 0 0 rgba(216,166,75,0.5);} 50%{opacity:0.6; box-shadow:0 0 0 6px rgba(216,166,75,0);}}
+
+  h1.title{
+    position:relative; z-index:1;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(2.6rem, 7vw, 5.4rem);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+    margin:0 auto 22px;
+    max-width:16ch;
+  }
+  h1.title em{
+    font-style:italic; font-weight:500;
+    background:linear-gradient(100deg, var(--gold-soft), var(--rose) 80%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.sub{
+    position:relative; z-index:1;
+    max-width:52ch; margin:0 auto 44px;
+    color:var(--ink-muted);
+    font-size:clamp(1rem, 1.6vw, 1.15rem);
+    line-height:1.6;
+  }
+
+  /* signature mic illustration */
+  .stage-art{ position:relative; z-index:1; margin:0 auto 48px; width:min(560px, 90%); }
+  .stage-art svg{width:100%; height:auto; display:block;}
+  .wave{ transform-origin:center; animation:ring 3.6s ease-out infinite; opacity:0; }
+  .wave.w2{animation-delay:.9s;}
+  .wave.w3{animation-delay:1.8s;}
+  @keyframes ring{
+    0%{ transform:scale(0.72); opacity:0; }
+    12%{ opacity:0.55; }
+    75%{ opacity:0; }
+    100%{ transform:scale(1.28); opacity:0; }
+  }
+
+  /* stats readout */
+  .readout{
+    position:relative; z-index:1;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:0;
+    max-width:760px; margin:0 auto;
+    border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; background:rgba(245,236,223,0.02);
+  }
+  .readout .stat{
+    flex:1 1 140px; padding:20px 16px; text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .readout .stat:last-child{border-right:none;}
+  .readout .stat b{
+    display:block; font-family:'Fraunces', serif; font-weight:600;
+    font-size:1.8rem; color:var(--gold-soft); line-height:1;
+    margin-bottom:6px;
+  }
+  .readout .stat span{
+    font-family:'IBM Plex Mono', monospace; font-size:0.66rem;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint);
+  }
+
+  /* ---------- controls ---------- */
+  .controls{
+    position:sticky; top:61px; z-index:15;
+    background:rgba(21,9,16,0.92); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:18px clamp(20px,6vw,64px);
+  }
+  .controls-inner{
+    max-width:1180px; margin:0 auto;
+    display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+  }
+  .search-wrap{
+    flex:1 1 280px; position:relative;
+  }
+  .search-wrap svg{
+    position:absolute; left:14px; top:50%; transform:translateY(-50%);
+    width:16px; height:16px; stroke:var(--ink-faint);
+  }
+  input#search{
+    width:100%; padding:12px 14px 12px 38px;
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:10px; color:var(--ink); font-size:0.92rem;
+    font-family:'Work Sans', sans-serif;
+    transition:border-color .2s, box-shadow .2s;
+  }
+  input#search::placeholder{color:var(--ink-faint);}
+  input#search:focus{
+    outline:none; border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(216,166,75,0.15);
+  }
+  select{
+    padding:12px 34px 12px 14px;
+    background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23b9a89c'/%3E%3C/svg%3E") no-repeat right 14px center;
+    border:1px solid var(--line); border-radius:10px;
+    color:var(--ink); font-size:0.85rem; font-family:'Work Sans', sans-serif;
+    appearance:none; cursor:pointer;
+    transition:border-color .2s;
+  }
+  select:focus{outline:none; border-color:var(--gold);}
+  .count-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
+    color:var(--ink-faint); letter-spacing:0.04em; white-space:nowrap;
+    padding:0 4px;
+  }
+  .count-tag b{color:var(--gold-soft); font-weight:500;}
+
+  /* ---------- role tabs ---------- */
+  .role-tabs{
+    display:flex; gap:6px; flex-wrap:wrap;
+    padding:14px clamp(20px,6vw,64px) 0;
+    max-width:1180px; margin:0 auto;
+  }
+  .role-tab{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+    letter-spacing:0.08em; text-transform:uppercase;
+    padding:9px 16px; border-radius:999px;
+    border:1px solid var(--line); background:transparent; color:var(--ink-muted);
+    cursor:pointer; transition:all .2s;
+  }
+  .role-tab:hover{ border-color:var(--line-strong); color:var(--ink); }
+  .role-tab.active{
+    background:var(--gold); border-color:var(--gold); color:#1a0d12; font-weight:600;
+  }
+
+  /* ---------- browse chip cloud ---------- */
+  .browse-panel{
+    max-width:1180px; margin:0 auto; padding:28px clamp(20px,6vw,64px) 0;
+  }
+  .browse-hint{
+    font-size:0.85rem; color:var(--ink-faint); margin-bottom:16px; font-style:italic;
+  }
+  .cloud{
+    display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .cloud-chip{
+    display:inline-flex; align-items:baseline; gap:8px;
+    padding:10px 16px; border-radius:12px;
+    background:linear-gradient(155deg, var(--panel) 0%, var(--panel-2) 100%);
+    border:1px solid var(--line);
+    cursor:pointer; transition:border-color .2s, transform .2s;
+    font-family:'Fraunces', serif; font-size:0.98rem; color:var(--ink);
+  }
+  .cloud-chip:hover{ border-color:var(--gold); transform:translateY(-2px); }
+  .cloud-chip .n{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem;
+    color:var(--gold-soft); font-weight:500;
+  }
+
+  /* ---------- active person filter pill ---------- */
+  .person-pill{
+    max-width:1180px; margin:0 auto; padding:20px clamp(20px,6vw,64px) 0;
+    display:none; align-items:center; gap:12px;
+  }
+  .person-pill.show{ display:flex; }
+  .person-pill .label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.7rem;
+    text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-faint);
+  }
+  .person-pill .name-badge{
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(216,166,75,0.12); border:1px solid rgba(216,166,75,0.4);
+    color:var(--gold-soft); padding:8px 14px; border-radius:999px;
+    font-family:'Fraunces', serif; font-size:1rem;
+  }
+  .person-pill .name-badge button{
+    background:none; border:none; color:var(--gold-soft); cursor:pointer;
+    font-size:1rem; line-height:1; padding:0; opacity:0.7;
+  }
+  .person-pill .name-badge button:hover{ opacity:1; }
+
+  /* ---------- eras & list ---------- */
+  main{max-width:1180px; margin:0 auto; padding:48px clamp(20px,6vw,64px) 100px;}
+  .era{margin-bottom:52px;}
+  .era-head{
+    display:flex; align-items:baseline; gap:16px; margin-bottom:20px;
+    padding-bottom:12px; border-bottom:1px solid var(--line);
+  }
+  .era-head h2{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.5rem; margin:0;
+  }
+  .era-head .years{
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem;
+    color:var(--gold-soft); letter-spacing:0.06em;
+  }
+  .era-head .era-note{
+    margin-left:auto; font-size:0.8rem; color:var(--ink-faint);
+    font-style:italic; display:none;
+  }
+  @media(min-width:640px){ .era-head .era-note{display:block;} }
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    gap:14px;
+  }
+  .card{
+    position:relative;
+    background:linear-gradient(155deg, var(--panel) 0%, var(--panel-2) 100%);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 20px 18px;
+    overflow:hidden;
+    transition:border-color .25s, transform .25s;
+  }
+  .card::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:linear-gradient(var(--gold), var(--rose));
+    opacity:0; transition:opacity .25s;
+  }
+  .card:hover{ border-color:var(--line-strong); transform:translateY(-2px); }
+  .card:hover::before{ opacity:1; }
+
+  .card .year-badge{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem;
+    color:var(--ink-faint); letter-spacing:0.08em;
+    margin-bottom:8px; display:block;
+  }
+  .card h3{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.18rem;
+    margin:0 0 4px; line-height:1.25; letter-spacing:-0.005em;
+  }
+  .card .film{
+    font-size:0.88rem; color:var(--gold-soft); margin-bottom:14px;
+    font-style:italic;
+  }
+  .card .meta-row{
+    display:flex; flex-direction:column; gap:6px;
+    font-size:0.78rem; color:var(--ink-muted);
+    border-top:1px solid var(--line); padding-top:12px;
+  }
+  .card .meta-row div{display:flex; gap:6px;}
+  .card .meta-row .k{
+    font-family:'IBM Plex Mono', monospace; font-size:0.64rem;
+    text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-faint);
+    min-width:64px; flex-shrink:0; padding-top:1px;
+  }
+  .card .vocalists{
+    display:flex; flex-wrap:wrap; gap:5px; margin-top:2px;
+  }
+  .chip{
+    font-size:0.72rem; padding:2px 9px; border-radius:999px;
+    border:1px solid var(--line-strong); color:var(--ink-muted);
+    white-space:nowrap;
+  }
+  .chip.lead{ border-color:rgba(216,166,75,0.45); color:var(--gold-soft); }
+
+  .empty{
+    text-align:center; padding:80px 20px; color:var(--ink-faint);
+    font-family:'Fraunces', serif; font-size:1.2rem; font-style:italic;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:40px clamp(20px,6vw,64px) 50px;
+    text-align:center;
+  }
+  footer p{
+    max-width:56ch; margin:0 auto 8px; color:var(--ink-faint);
+    font-size:0.82rem; line-height:1.7;
+  }
+  footer .signoff{
+    font-family:'Fraunces', serif; font-style:italic; color:var(--ink-muted);
+    font-size:0.95rem; margin-top:18px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .wave, .eyebrow .pulse{ animation:none !important; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="top">
+  <div class="brand"><span class="dot"></span> Sur — The Arijit Singh Archive</div>
+  <nav>
+    <a href="#archive">Archive</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow"><span class="pulse"></span> A fan-built song archive</div>
+  <h1 class="title">Every song has<br><em>a voice</em> behind it.</h1>
+  <p class="sub">A growing, searchable record of Bollywood songs sung by Arijit Singh — film, year, co-vocalists, lyricist and composer, all in one place.</p>
+
+  <div class="stage-art" aria-hidden="true">
+    <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+      <circle class="wave w1" cx="280" cy="120" r="60" fill="none" stroke="#d8a64b" stroke-width="1"/>
+      <circle class="wave w2" cx="280" cy="120" r="60" fill="none" stroke="#c25a6d" stroke-width="1"/>
+      <circle class="wave w3" cx="280" cy="120" r="60" fill="none" stroke="#d8a64b" stroke-width="1"/>
+      <line x1="280" y1="150" x2="280" y2="205" stroke="#7d6b62" stroke-width="2"/>
+      <line x1="250" y1="205" x2="310" y2="205" stroke="#7d6b62" stroke-width="2" stroke-linecap="round"/>
+      <rect x="262" y="70" width="36" height="66" rx="18" fill="#e9c785"/>
+      <rect x="262" y="70" width="36" height="66" rx="18" fill="none" stroke="#150910" stroke-width="1" opacity="0.15"/>
+      <path d="M246 108 a34 34 0 0 0 68 0" fill="none" stroke="#d8a64b" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="readout" id="statReadout">
+    <div class="stat"><b id="statSongs">—</b><span>Songs archived</span></div>
+    <div class="stat"><b id="statFilms">—</b><span>Films</span></div>
+    <div class="stat"><b id="statYears">—</b><span>Years spanned</span></div>
+    <div class="stat"><b id="statComposers">—</b><span>Actors featured</span></div>
+  </div>
+</section>
+
+<div class="controls" id="archive">
+  <div class="controls-inner">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="search" type="text" placeholder="Search a song or film title…" autocomplete="off">
+    </div>
+    <select id="yearFilter"><option value="">All years</option></select>
+    <select id="composerFilter"><option value="">All composers</option></select>
+    <span class="count-tag"><b id="resultCount">0</b> songs showing</span>
+  </div>
+</div>
+
+<div class="role-tabs">
+  <button class="role-tab active" data-role="songs">All Songs</button>
+  <button class="role-tab" data-role="composers">Browse by Composer</button>
+  <button class="role-tab" data-role="lyricists">Browse by Lyricist</button>
+  <button class="role-tab" data-role="vocalists">Browse by Co-Vocalist</button>
+  <button class="role-tab" data-role="actors">Browse by Actor</button>
+</div>
+
+<div class="browse-panel" id="browsePanel" style="display:none;">
+  <div class="browse-hint">Click a name to see every song they made with Arijit Singh.</div>
+  <div class="cloud" id="cloud"></div>
+</div>
+
+<div class="person-pill" id="personPill">
+  <span class="label">Showing songs where <span id="personRole"></span> is</span>
+  <span class="name-badge"><span id="personName"></span><button id="clearPerson" aria-label="Clear filter">✕</button></span>
+</div>
+
+<main id="results"></main>
+
+<footer id="about">
+  <p><strong>About this archive.</strong> This is a curated, actively-growing collection — not a literal claim of every one of Arijit Singh's 600+ recorded credits. It focuses on major Bollywood releases across his career, built to be easy to keep expanding. Every composer, lyricist, and vocalist is stored once and linked to their songs, so you can browse by name and see their full body of work with him. Spotted something missing or incorrect? That's the nature of a fan archive — it's never really finished.</p>
+  <p class="signoff">Built for the ones who know every antara by heart.</p>
+</footer>
+
+<script>
+// This data comes straight from the normalized SQLAlchemy database via
+// export_json.py: each song already carries resolved composer/lyricist/
+// vocalist NAMES (joined from their own tables), but the underlying
+// database stores each of those names exactly once.
+const DATA = {"songs": [{"id": 1, "title": "Phir Mohabbat", "film": "Murder 2", "year": 2011, "composers": ["Mithoon"], "lyricists": ["Sayeed Quadri"], "actors": ["Emraan Hashmi"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 6, "title": "Phir Le Aya Dil", "film": "Barfi!", "year": 2012, "composers": ["Pritam"], "lyricists": ["Sayeed Quadri"], "actors": ["Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 9, "title": "Raabta", "film": "Agent Vinod", "year": 2012, "composers": ["Pritam"], "lyricists": ["Kausar Munir"], "actors": ["Saif Ali Khan", "Kareena Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 5, "title": "Tum Hi Ho Bandhu", "film": "Cocktail", "year": 2012, "composers": ["Pritam"], "lyricists": ["Irshad Kamil"], "actors": ["Saif Ali Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shefali Alvares", "is_lead": false}]}, {"id": 4, "title": "Chahun Main Ya Naa", "film": "Aashiqui 2", "year": 2013, "composers": ["Jeet Gannguli"], "lyricists": ["Mithoon"], "actors": ["Aditya Roy Kapur", "Shraddha Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Palak Muchhal", "is_lead": false}]}, {"id": 7, "title": "Ilahi", "film": "Yeh Jawaani Hai Deewani", "year": 2013, "composers": ["Pritam"], "lyricists": ["Irshad Kamil"], "actors": ["Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 50, "title": "Kabhi Jo Baadal Barse", "film": "Jackpot", "year": 2013, "composers": ["Mithoon"], "lyricists": ["Sayeed Quadri"], "actors": ["Sachiin Joshi"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 8, "title": "Kabira (Encore)", "film": "Yeh Jawaani Hai Deewani", "year": 2013, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Ranbir Kapoor", "Deepika Padukone"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Harshdeep Kaur", "is_lead": false}]}, {"id": 44, "title": "Laal Ishq", "film": "Goliyon Ki Raasleela Ram-Leela", "year": 2013, "composers": ["Sanjay Leela Bhansali"], "lyricists": ["Siddharth-Garima"], "actors": ["Deepika Padukone", "Ranveer Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 3, "title": "Sunn Raha Hai Na Tu (Male)", "film": "Aashiqui 2", "year": 2013, "composers": ["Mithoon"], "lyricists": ["Mithoon"], "actors": ["Aditya Roy Kapur"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 2, "title": "Tum Hi Ho", "film": "Aashiqui 2", "year": 2013, "composers": ["Mithoon"], "lyricists": ["Mithoon"], "actors": ["Aditya Roy Kapur"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 29, "title": "Humdard", "film": "Ek Villain", "year": 2014, "composers": ["Mithoon"], "lyricists": ["Mithoon"], "actors": ["Shraddha Kapoor", "Siddharth Malhotra"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 10, "title": "Manwa Laage", "film": "Happy New Year", "year": 2014, "composers": ["Vishal-Shekhar"], "lyricists": ["Irshad Kamil"], "actors": ["Deepika Padukone", "Shah Rukh Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shreya Ghoshal", "is_lead": false}]}, {"id": 11, "title": "Muskurane", "film": "Citylights", "year": 2014, "composers": ["Jeet Gannguli"], "lyricists": ["Rashmi Singh"], "actors": ["Rajkummar Rao"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 45, "title": "Sawan Aaya Hai", "film": "Creature 3D", "year": 2014, "composers": ["Mithoon"], "lyricists": ["Mithoon"], "actors": ["Bipasha Basu", "Imran Abbas"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Aakanksha Sharma", "is_lead": false}]}, {"id": 12, "title": "Suno Na Sangemarmar", "film": "Youngistaan", "year": 2014, "composers": ["Jeet Gannguli"], "lyricists": ["Manoj Yadav"], "actors": ["Jackky Bhagnani"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 68, "title": "Aayat", "film": "Bajirao Mastani", "year": 2015, "composers": ["Sanjay Leela Bhansali"], "lyricists": ["Siddharth-Garima"], "actors": ["Deepika Padukone", "Ranveer Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 16, "title": "Agar Tum Saath Ho", "film": "Tamasha", "year": 2015, "composers": ["A. R. Rahman"], "lyricists": ["Irshad Kamil"], "actors": ["Ranbir Kapoor", "Deepika Padukone"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Alka Yagnik", "is_lead": false}]}, {"id": 13, "title": "Gerua", "film": "Dilwale", "year": 2015, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Shah Rukh Khan", "Kajol"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Antara Mitra", "is_lead": false}]}, {"id": 14, "title": "Janam Janam", "film": "Dilwale", "year": 2015, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Shah Rukh Khan", "Kajol"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Antara Mitra", "is_lead": false}]}, {"id": 43, "title": "Judaai", "film": "Badlapur", "year": 2015, "composers": ["Sachin-Jigar"], "lyricists": ["Sayeed Quadri"], "actors": ["Varun Dhawan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 15, "title": "Manma Emotion Jaage", "film": "Dilwale", "year": 2015, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Varun Dhawan", "Kriti Sanon"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shreya Ghoshal", "is_lead": false}, {"name": "Nakash Aziz", "is_lead": false}, {"name": "Kanika Kapoor", "is_lead": false}]}, {"id": 47, "title": "Sooraj Dooba Hai", "film": "Roy", "year": 2015, "composers": ["Amaal Mallik"], "lyricists": ["Kumaar"], "actors": ["Ranbir Kapoor", "Jacqueline Fernandez"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Aditi Singh Sharma", "is_lead": false}]}, {"id": 17, "title": "Ae Dil Hai Mushkil", "film": "Ae Dil Hai Mushkil", "year": 2016, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 46, "title": "Bolna", "film": "Kapoor & Sons", "year": 2016, "composers": ["Tanishk Bagchi"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Alia Bhatt", "Sidharth Malhotra"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Asees Kaur", "is_lead": false}]}, {"id": 48, "title": "Chal Wahan Jaate Hain", "film": "Non-Film Single", "year": 2016, "composers": ["Jeet Gannguli"], "lyricists": ["Kumaar"], "actors": ["Tiger Shroff"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 18, "title": "Channa Mereya", "film": "Ae Dil Hai Mushkil", "year": 2016, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 25, "title": "Naina", "film": "Dangal", "year": 2016, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Aamir Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 52, "title": "Nashe Si Chadh Gayi", "film": "Befikre", "year": 2016, "composers": ["Vishal-Shekhar"], "lyricists": ["Jaideep Sahni"], "actors": ["Ranveer Singh", "Vaani Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 40, "title": "Sanam Re (Title Track)", "film": "Sanam Re", "year": 2016, "composers": ["Mithoon"], "lyricists": ["Mithoon"], "actors": ["Pulkit Samrat", "Yami Gautam"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 49, "title": "Tera Chehra", "film": "Sanam Teri Kasam", "year": 2016, "composers": ["Himesh Reshammiya"], "lyricists": ["Manoj Muntashir"], "actors": ["Harshvardhan Rane", "Mawra Hocane"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Palak Muchhal", "is_lead": false}]}, {"id": 19, "title": "The Breakup Song", "film": "Ae Dil Hai Mushkil", "year": 2016, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Ranbir Kapoor", "Anushka Sharma"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Nakash Aziz", "is_lead": false}, {"name": "Badshah", "is_lead": false}, {"name": "Jonita Gandhi", "is_lead": false}]}, {"id": 54, "title": "Yeh Fitoor Mera", "film": "Fitoor", "year": 2016, "composers": ["Amit Trivedi"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Aditya Roy Kapur", "Katrina Kaif"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 28, "title": "Enna Sona", "film": "OK Jaanu", "year": 2017, "composers": ["A. R. Rahman"], "lyricists": ["Gulzar"], "actors": ["Aditya Roy Kapur", "Shraddha Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 53, "title": "Hawayein", "film": "Jab Harry Met Sejal", "year": 2017, "composers": ["Pritam"], "lyricists": ["Irshad Kamil"], "actors": ["Shah Rukh Khan", "Anushka Sharma"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 39, "title": "Phir Bhi Tumko Chaahunga", "film": "Half Girlfriend", "year": 2017, "composers": ["Mithoon"], "lyricists": ["Mithoon"], "actors": ["Shraddha Kapoor", "Arjun Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 26, "title": "Roke Na Ruke Naina", "film": "Badrinath Ki Dulhania", "year": 2017, "composers": ["Amaal Mallik"], "lyricists": ["Kumaar"], "actors": ["Varun Dhawan", "Alia Bhatt"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Neha Kakkar", "is_lead": false}]}, {"id": 27, "title": "Zaalima", "film": "Raees", "year": 2017, "composers": ["JAM8"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Shah Rukh Khan", "Mahira Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Harshdeep Kaur", "is_lead": false}]}, {"id": 20, "title": "Ae Watan", "film": "Raazi", "year": 2018, "composers": ["Shankar-Ehsaan-Loy"], "lyricists": ["Gulzar"], "actors": ["Alia Bhatt"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 31, "title": "Dil Jaaniye", "film": "Sonu Ke Titu Ki Sweety", "year": 2018, "composers": ["Payal Dev"], "lyricists": ["Kumaar"], "actors": ["Kartik Aaryan", "Nushrat Bharucha"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Neeti Mohan", "is_lead": false}]}, {"id": 51, "title": "O Saathi", "film": "Baaghi 2", "year": 2018, "composers": ["Arko"], "lyricists": ["Kumaar"], "actors": ["Tiger Shroff", "Disha Patani"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 37, "title": "Pachtaoge", "film": "Genius", "year": 2018, "composers": ["B Praak"], "lyricists": ["Manoj Muntashir"], "actors": ["Vicky Kaushal", "Nora Fatehi"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 30, "title": "Tera Yaar Hoon Main", "film": "Sonu Ke Titu Ki Sweety", "year": 2018, "composers": ["Rochak Kohli"], "lyricists": ["Kumaar"], "actors": ["Kartik Aaryan", "Sunny Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Rochak Kohli", "is_lead": false}]}, {"id": 22, "title": "First Class", "film": "Kalank", "year": 2019, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Varun Dhawan", "Kiara Advani"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Neeti Mohan", "is_lead": false}]}, {"id": 24, "title": "Ghungroo", "film": "War", "year": 2019, "composers": ["Vishal-Shekhar"], "lyricists": ["Kumaar"], "actors": ["Hrithik Roshan", "Tiger Shroff"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shilpa Rao", "is_lead": false}]}, {"id": 21, "title": "Kalank (Title Track)", "film": "Kalank", "year": 2019, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Madhuri Dixit", "Sanjay Dutt"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 32, "title": "Khairiyat", "film": "Chhichhore", "year": 2019, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Shraddha Kapoor", "Sushant Singh Rajput"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 58, "title": "Mere Sohneya", "film": "Kabir Singh", "year": 2019, "composers": ["Sachet-Parampara"], "lyricists": ["Irshad Kamil"], "actors": ["Kiara Advani", "Shahid Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Asees Kaur", "is_lead": false}]}, {"id": 23, "title": "Tabaah Ho Gaye", "film": "Kalank", "year": 2019, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Alia Bhatt", "Sanjay Dutt"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 41, "title": "Tujhe Kitna Chahne Lage", "film": "Kabir Singh", "year": 2019, "composers": ["Mithoon"], "lyricists": ["Irshad Kamil"], "actors": ["Kiara Advani", "Shahid Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 42, "title": "Ve Maahi", "film": "Kesari", "year": 2019, "composers": ["Arko"], "lyricists": ["Irshad Kamil"], "actors": ["Akshay Kumar", "Parineeti Chopra"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Asees Kaur", "is_lead": false}]}, {"id": 55, "title": "Chal Ghar Chalen", "film": "Malang", "year": 2020, "composers": ["Mithoon"], "lyricists": ["Manoj Muntashir"], "actors": ["Aditya Roy Kapur"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 36, "title": "Dil Bechara (Title Track)", "film": "Dil Bechara", "year": 2020, "composers": ["A. R. Rahman"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Sushant Singh Rajput"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 38, "title": "Shayad", "film": "Love Aaj Kal", "year": 2020, "composers": ["Pritam"], "lyricists": ["Irshad Kamil"], "actors": ["Kartik Aaryan", "Sara Ali Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 57, "title": "Chaka Chak", "film": "Atrangi Re", "year": 2021, "composers": ["A. R. Rahman"], "lyricists": ["A. M. Turaz"], "actors": ["Sara Ali Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 56, "title": "Rait Zara Si", "film": "Atrangi Re", "year": 2021, "composers": ["A. R. Rahman"], "lyricists": ["A. M. Turaz"], "actors": ["Akshay Kumar"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shreya Ghoshal", "is_lead": false}]}, {"id": 35, "title": "Apna Bana Le", "film": "Bhediya", "year": 2022, "composers": ["Sachin-Jigar"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Varun Dhawan", "Kriti Sanon"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 34, "title": "Deva Deva", "film": "Brahmastra", "year": 2022, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Jonita Gandhi", "is_lead": false}]}, {"id": 33, "title": "Kesariya", "film": "Brahmastra", "year": 2022, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Ranbir Kapoor", "Alia Bhatt"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 67, "title": "Aayi Nai", "film": "Jawan", "year": 2023, "composers": ["Anirudh Ravichander"], "lyricists": ["Kumaar"], "actors": ["Shah Rukh Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 66, "title": "Chaleya", "film": "Jawan", "year": 2023, "composers": ["Anirudh Ravichander"], "lyricists": ["Irshad Kamil"], "actors": ["Shah Rukh Khan", "Nayanthara"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shilpa Rao", "is_lead": false}]}, {"id": 63, "title": "Dhoop", "film": "Rocky Aur Rani Kii Prem Kahaani", "year": 2023, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Alia Bhatt", "Ranveer Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 70, "title": "Heeriye", "film": "Non-Film Single", "year": 2023, "composers": ["Jasleen Royal", "Arijit Singh"], "lyricists": ["Jasleen Royal"], "actors": [], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 59, "title": "Jhoome Jo Pathaan", "film": "Pathaan", "year": 2023, "composers": ["Vishal-Shekhar"], "lyricists": ["Kumaar"], "actors": ["Deepika Padukone", "Shah Rukh Khan"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Sukriti Kakar", "is_lead": false}, {"name": "Vishal Dadlani", "is_lead": false}, {"name": "Caralisa Monteiro", "is_lead": false}]}, {"id": 69, "title": "O Bedardeya", "film": "Tu Jhoothi Main Makkaar", "year": 2023, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Shraddha Kapoor", "Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 65, "title": "Papa Meri Jaan", "film": "Animal", "year": 2023, "composers": ["Harshavardhan Rameshwar"], "lyricists": ["Manoj Muntashir Shukla"], "actors": ["Ranbir Kapoor"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 64, "title": "Satranga", "film": "Animal", "year": 2023, "composers": ["Shreyas Puranik"], "lyricists": ["Manoj Muntashir Shukla"], "actors": ["Ranbir Kapoor", "Tripti Dimri"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}]}, {"id": 60, "title": "Tum Kya Mile", "film": "Rocky Aur Rani Kii Prem Kahaani", "year": 2023, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Alia Bhatt", "Ranveer Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shreya Ghoshal", "is_lead": false}]}, {"id": 62, "title": "Ve Kamleya", "film": "Rocky Aur Rani Kii Prem Kahaani", "year": 2023, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Alia Bhatt", "Ranveer Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Shreya Ghoshal", "is_lead": false}, {"name": "Jonita Gandhi", "is_lead": false}]}, {"id": 61, "title": "What Jhumka", "film": "Rocky Aur Rani Kii Prem Kahaani", "year": 2023, "composers": ["Pritam"], "lyricists": ["Amitabh Bhattacharya"], "actors": ["Alia Bhatt", "Ranveer Singh"], "vocalists": [{"name": "Arijit Singh", "is_lead": true}, {"name": "Jonita Gandhi", "is_lead": false}]}], "composers": [{"name": "Pritam", "count": 25}, {"name": "Mithoon", "count": 10}, {"name": "A. R. Rahman", "count": 5}, {"name": "Jeet Gannguli", "count": 4}, {"name": "Vishal-Shekhar", "count": 4}, {"name": "Amaal Mallik", "count": 2}, {"name": "Anirudh Ravichander", "count": 2}, {"name": "Arko", "count": 2}, {"name": "Sachin-Jigar", "count": 2}, {"name": "Sanjay Leela Bhansali", "count": 2}, {"name": "Amit Trivedi", "count": 1}, {"name": "Arijit Singh", "count": 1}, {"name": "B Praak", "count": 1}, {"name": "Harshavardhan Rameshwar", "count": 1}, {"name": "Himesh Reshammiya", "count": 1}, {"name": "JAM8", "count": 1}, {"name": "Jasleen Royal", "count": 1}, {"name": "Payal Dev", "count": 1}, {"name": "Rochak Kohli", "count": 1}, {"name": "Sachet-Parampara", "count": 1}, {"name": "Shankar-Ehsaan-Loy", "count": 1}, {"name": "Shreyas Puranik", "count": 1}, {"name": "Tanishk Bagchi", "count": 1}], "lyricists": [{"name": "Amitabh Bhattacharya", "count": 24}, {"name": "Irshad Kamil", "count": 10}, {"name": "Kumaar", "count": 9}, {"name": "Mithoon", "count": 7}, {"name": "Sayeed Quadri", "count": 4}, {"name": "Manoj Muntashir", "count": 3}, {"name": "A. M. Turaz", "count": 2}, {"name": "Gulzar", "count": 2}, {"name": "Manoj Muntashir Shukla", "count": 2}, {"name": "Siddharth-Garima", "count": 2}, {"name": "Jaideep Sahni", "count": 1}, {"name": "Jasleen Royal", "count": 1}, {"name": "Kausar Munir", "count": 1}, {"name": "Manoj Yadav", "count": 1}, {"name": "Rashmi Singh", "count": 1}], "vocalists": [{"name": "Shreya Ghoshal", "count": 5}, {"name": "Jonita Gandhi", "count": 4}, {"name": "Asees Kaur", "count": 3}, {"name": "Antara Mitra", "count": 2}, {"name": "Harshdeep Kaur", "count": 2}, {"name": "Nakash Aziz", "count": 2}, {"name": "Neeti Mohan", "count": 2}, {"name": "Palak Muchhal", "count": 2}, {"name": "Shilpa Rao", "count": 2}, {"name": "Aakanksha Sharma", "count": 1}, {"name": "Aditi Singh Sharma", "count": 1}, {"name": "Alka Yagnik", "count": 1}, {"name": "Badshah", "count": 1}, {"name": "Caralisa Monteiro", "count": 1}, {"name": "Kanika Kapoor", "count": 1}, {"name": "Neha Kakkar", "count": 1}, {"name": "Rochak Kohli", "count": 1}, {"name": "Shefali Alvares", "count": 1}, {"name": "Sukriti Kakar", "count": 1}, {"name": "Vishal Dadlani", "count": 1}], "actors": [{"name": "Ranbir Kapoor", "count": 13}, {"name": "Alia Bhatt", "count": 9}, {"name": "Shah Rukh Khan", "count": 8}, {"name": "Ranveer Singh", "count": 7}, {"name": "Aditya Roy Kapur", "count": 6}, {"name": "Deepika Padukone", "count": 6}, {"name": "Shraddha Kapoor", "count": 6}, {"name": "Varun Dhawan", "count": 5}, {"name": "Kartik Aaryan", "count": 3}, {"name": "Kiara Advani", "count": 3}, {"name": "Tiger Shroff", "count": 3}, {"name": "Akshay Kumar", "count": 2}, {"name": "Anushka Sharma", "count": 2}, {"name": "Kajol", "count": 2}, {"name": "Kriti Sanon", "count": 2}, {"name": "Saif Ali Khan", "count": 2}, {"name": "Sanjay Dutt", "count": 2}, {"name": "Sara Ali Khan", "count": 2}, {"name": "Shahid Kapoor", "count": 2}, {"name": "Sushant Singh Rajput", "count": 2}, {"name": "Aamir Khan", "count": 1}, {"name": "Arjun Kapoor", "count": 1}, {"name": "Bipasha Basu", "count": 1}, {"name": "Disha Patani", "count": 1}, {"name": "Emraan Hashmi", "count": 1}, {"name": "Harshvardhan Rane", "count": 1}, {"name": "Hrithik Roshan", "count": 1}, {"name": "Imran Abbas", "count": 1}, {"name": "Jackky Bhagnani", "count": 1}, {"name": "Jacqueline Fernandez", "count": 1}, {"name": "Kareena Kapoor", "count": 1}, {"name": "Katrina Kaif", "count": 1}, {"name": "Madhuri Dixit", "count": 1}, {"name": "Mahira Khan", "count": 1}, {"name": "Mawra Hocane", "count": 1}, {"name": "Nayanthara", "count": 1}, {"name": "Nora Fatehi", "count": 1}, {"name": "Nushrat Bharucha", "count": 1}, {"name": "Parineeti Chopra", "count": 1}, {"name": "Pulkit Samrat", "count": 1}, {"name": "Rajkummar Rao", "count": 1}, {"name": "Sachiin Joshi", "count": 1}, {"name": "Siddharth Malhotra", "count": 1}, {"name": "Sidharth Malhotra", "count": 1}, {"name": "Sunny Singh", "count": 1}, {"name": "Tripti Dimri", "count": 1}, {"name": "Vaani Kapoor", "count": 1}, {"name": "Vicky Kaushal", "count": 1}, {"name": "Yami Gautam", "count": 1}]};
+const SONGS = DATA.songs;
+
+const ERA_DEFS = [
+  {label:"The Breakthrough", note:"When the voice first found the spotlight", from:2011, to:2013},
+  {label:"The Rise", note:"An entire generation of soundtracks", from:2014, to:2016},
+  {label:"The Superstar Years", note:"Every soundtrack needed that one Arijit song", from:2017, to:2019},
+  {label:"The New Chapter", note:"Streaming era, same soul", from:2020, to:2023},
+];
+
+function eraFor(year){
+  return ERA_DEFS.find(e => year >= e.from && year <= e.to) || {label:"Other Years", note:"", from:year, to:year};
+}
+
+// ---- populate stat readout ----
+const uniqFilms = new Set(SONGS.filter(s=>s.film!=="Non-Film Single").map(s=>s.film));
+const years = SONGS.map(s=>s.year);
+document.getElementById('statSongs').textContent = SONGS.length;
+document.getElementById('statFilms').textContent = uniqFilms.size;
+document.getElementById('statYears').textContent = `${Math.min(...years)}–${Math.max(...years)}`;
+document.getElementById('statComposers').textContent = DATA.actors.length;
+
+// ---- populate top filters ----
+const yearFilter = document.getElementById('yearFilter');
+[...new Set(years)].sort((a,b)=>b-a).forEach(y=>{
+  const o = document.createElement('option'); o.value=y; o.textContent=y; yearFilter.appendChild(o);
+});
+const composerFilter = document.getElementById('composerFilter');
+DATA.composers.map(c=>c.name).sort().forEach(c=>{
+  const o = document.createElement('option'); o.value=c; o.textContent=c; composerFilter.appendChild(o);
+});
+
+const searchInput = document.getElementById('search');
+const resultsEl = document.getElementById('results');
+const resultCount = document.getElementById('resultCount');
+const roleTabs = document.querySelectorAll('.role-tab');
+const browsePanel = document.getElementById('browsePanel');
+const cloudEl = document.getElementById('cloud');
+const personPill = document.getElementById('personPill');
+
+// state: which role tab is active, and whether a specific person is selected
+let state = { role: 'songs', person: null }; // person = {role, name} once a chip is clicked
+
+function chipify(vocalists){
+  return vocalists.map(v=>{
+    return `<span class="chip ${v.is_lead ? 'lead' : ''}">${v.name}</span>`;
+  }).join('');
+}
+
+function songMatchesPerson(s){
+  if(!state.person) return true;
+  const {role, name} = state.person;
+  if(role === 'composers') return s.composers.includes(name);
+  if(role === 'lyricists') return s.lyricists.includes(name);
+  if(role === 'vocalists') return s.vocalists.some(v=>v.name===name);
+  if(role === 'actors') return s.actors.includes(name);
+  return true;
+}
+
+function renderCloud(role){
+  const list = DATA[role]; // [{name, count}]
+  cloudEl.innerHTML = list.map(item =>
+    `<button class="cloud-chip" data-name="${item.name.replace(/"/g,'&quot;')}">
+       ${item.name} <span class="n">${item.count}</span>
+     </button>`
+  ).join('');
+  cloudEl.querySelectorAll('.cloud-chip').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      state.person = { role, name: btn.dataset.name };
+      showPersonView();
+    });
+  });
+}
+
+function showPersonView(){
+  browsePanel.style.display = 'none';
+  personPill.classList.add('show');
+  const roleLabel = { composers:'Composer', lyricists:'Lyricist', vocalists:'Co-Vocalist', actors:'Actor' }[state.person.role];
+  document.getElementById('personRole').textContent = roleLabel;
+  document.getElementById('personName').textContent = state.person.name;
+  render();
+}
+
+document.getElementById('clearPerson').addEventListener('click', ()=>{
+  state.person = null;
+  personPill.classList.remove('show');
+  if(state.role !== 'songs') browsePanel.style.display = 'block';
+  render();
+});
+
+roleTabs.forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    roleTabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    state.role = tab.dataset.role;
+    state.person = null;
+    personPill.classList.remove('show');
+    if(state.role === 'songs'){
+      browsePanel.style.display = 'none';
+    } else {
+      browsePanel.style.display = 'block';
+      renderCloud(state.role);
+    }
+    render();
+  });
+});
+
+function render(){
+  const q = searchInput.value.trim().toLowerCase();
+  const yf = yearFilter.value;
+  const cf = composerFilter.value;
+
+  let filtered = SONGS.filter(s=>{
+    const matchesQ = !q || s.title.toLowerCase().includes(q) || s.film.toLowerCase().includes(q);
+    const matchesY = !yf || String(s.year) === yf;
+    const matchesC = !cf || s.composers.includes(cf);
+    const matchesP = songMatchesPerson(s);
+    return matchesQ && matchesY && matchesC && matchesP;
+  });
+
+  resultCount.textContent = filtered.length;
+
+  if(filtered.length === 0){
+    resultsEl.innerHTML = `<div class="empty">No songs match that — try another title, year, or name.</div>`;
+    return;
+  }
+
+  filtered.sort((a,b)=> a.year - b.year || a.title.localeCompare(b.title));
+
+  const groups = new Map();
+  filtered.forEach(s=>{
+    const era = eraFor(s.year);
+    if(!groups.has(era.label)) groups.set(era.label, {era, items:[]});
+    groups.get(era.label).items.push(s);
+  });
+
+  let html = '';
+  for(const {era, items} of groups.values()){
+    html += `<section class="era">
+      <div class="era-head">
+        <h2>${era.label}</h2>
+        <span class="years">${era.from}–${era.to}</span>
+        <span class="era-note">${era.note}</span>
+      </div>
+      <div class="grid">`;
+    for(const s of items){
+      html += `<article class="card">
+        <span class="year-badge">${s.year}</span>
+        <h3>${s.title}</h3>
+        <div class="film">${s.film}</div>
+        <div class="meta-row">
+          <div><span class="k">Vocals</span><span class="vocalists">${chipify(s.vocalists)}</span></div>
+          <div><span class="k">Lyrics</span><span>${s.lyricists.join(', ')}</span></div>
+          <div><span class="k">Music</span><span>${s.composers.join(', ')}</span></div>
+          ${s.actors.length ? `<div><span class="k">On-screen</span><span>${s.actors.join(', ')}</span></div>` : ''}
+        </div>
+      </article>`;
+    }
+    html += `</div></section>`;
+  }
+  resultsEl.innerHTML = html;
+}
+
+searchInput.addEventListener('input', render);
+yearFilter.addEventListener('change', render);
+composerFilter.addEventListener('change', render);
+
+render();
+</script>
+
+</body>
+</html>
