@@ -2,3 +2,7 @@
 *.db
 index_template.html
 __pycache__
+.idea
+DataSets
+alembic.ini
+migrations

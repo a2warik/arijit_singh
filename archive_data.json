@@ -1658,14 +1658,14 @@
     },
     {
       "id": 71,
-      "title": "Sukoon",
-      "film": "Bhoomi 2025",
-      "year": 2025,
+      "title": "Ek Din",
+      "film": "Ek Din",
+      "year": 2026,
       "composers": [
-        "Salim-Sulaiman"
+        "Ram Sampat"
       ],
       "lyricists": [
-        "Shraddha Pandit"
+        "Irshad Kamil"
       ],
       "actors": [],
       "vocalists": [
@@ -1750,15 +1750,15 @@
       "count": 1
     },
     {
+      "name": "Ram Sampat",
+      "count": 1
+    },
+    {
       "name": "Rochak Kohli",
       "count": 1
     },
     {
       "name": "Sachet-Parampara",
-      "count": 1
-    },
-    {
-      "name": "Salim-Sulaiman",
       "count": 1
     },
     {
@@ -1781,7 +1781,7 @@
     },
     {
       "name": "Irshad Kamil",
-      "count": 10
+      "count": 11
     },
     {
       "name": "Kumaar",
@@ -1833,10 +1833,6 @@
     },
     {
       "name": "Rashmi Singh",
-      "count": 1
-    },
-    {
-      "name": "Shraddha Pandit",
       "count": 1
     }
   ],
