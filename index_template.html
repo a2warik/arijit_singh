@@ -383,58 +383,25 @@
   }
   @media(min-width:640px){ .era-head .era-note{display:block;} }
 
-  /* a few fish at every depth -- species and color shift zone by zone */
-  .era-head::before, .era-head::after{
-    content:""; position:absolute; pointer-events:none;
-    background-repeat:no-repeat; background-size:contain;
-    opacity:0.8; animation:swim 9s ease-in-out infinite;
+  /* a swarm of fish drifting near the top of every era -- species,
+     color, and density shift zone by zone. Built by FISH_BY_ZONE in
+     the script below and injected as real elements (not CSS
+     pseudo-elements) so we're not capped at two per section. */
+  .fish-swarm{
+    position:absolute; top:-36px; left:0; right:0; height:160px;
+    pointer-events:none; overflow:visible; z-index:0;
   }
-  .era[data-zone="sunlight-zone"] .era-head::before{
-    width:38px; height:19px; top:-22px; right:8%;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23e8935a%27%20fill-opacity%3D%270.85%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23e8935a%27%20fill-opacity%3D%270.85%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.6%27%20fill%3D%27%23000%27%20opacity%3D%270.6%27/%3E%3C/svg%3E");
+  .fish-swarm span{
+    position:absolute; background-repeat:no-repeat; background-size:contain;
+    animation:swim ease-in-out infinite;
   }
-  .era[data-zone="sunlight-zone"] .era-head::after{
-    width:26px; height:13px; top:12px; right:22%;
-    transform:scaleX(-1); animation-delay:2.4s; animation-duration:7s;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23e8c34a%27%20fill-opacity%3D%270.85%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23e8c34a%27%20fill-opacity%3D%270.85%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.6%27%20fill%3D%27%23000%27%20opacity%3D%270.6%27/%3E%3C/svg%3E");
-  }
-  .era[data-zone="twilight-zone"] .era-head::before{
-    width:34px; height:17px; top:-18px; right:12%;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%235c8aa8%27%20fill-opacity%3D%270.85%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%235c8aa8%27%20fill-opacity%3D%270.85%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.6%27%20fill%3D%27%23000%27%20opacity%3D%270.6%27/%3E%3C/svg%3E");
-  }
-  .era[data-zone="twilight-zone"] .era-head::after{
-    width:22px; height:11px; top:14px; right:28%;
-    transform:scaleX(-1); animation-delay:3s; animation-duration:8s;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%237fa8b8%27%20fill-opacity%3D%270.85%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%237fa8b8%27%20fill-opacity%3D%270.85%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.6%27%20fill%3D%27%23000%27%20opacity%3D%270.6%27/%3E%3C/svg%3E");
-  }
-  .era[data-zone="midnight-zone"] .era-head::before{
-    width:32px; height:16px; top:-16px; right:10%; opacity:0.6;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%233a5a6c%27%20fill-opacity%3D%270.85%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%233a5a6c%27%20fill-opacity%3D%270.85%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.6%27%20fill%3D%27%23000%27%20opacity%3D%270.6%27/%3E%3C/svg%3E");
-  }
-  .era[data-zone="midnight-zone"] .era-head::after{
-    width:20px; height:10px; top:10px; right:24%; opacity:0.5;
-    transform:scaleX(-1); animation-delay:1.6s; animation-duration:10s;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%232c4a5c%27%20fill-opacity%3D%270.85%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%232c4a5c%27%20fill-opacity%3D%270.85%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.6%27%20fill%3D%27%23000%27%20opacity%3D%270.6%27/%3E%3C/svg%3E");
-  }
-  .era[data-zone="the-abyss"] .era-head::before{
-    width:40px; height:23px; top:-26px; right:9%; opacity:0.9;
-    animation-duration:11s;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2034%27%3E%3Cpath%20d%3D%27M6%2020%20L20%2012%20Q36%208%2052%2019%20Q36%2030%2020%2026%20Z%27%20fill%3D%27%230a1620%27%20fill-opacity%3D%270.92%27/%3E%3Cpath%20d%3D%27M6%2020%20L0%2013%20L0%2027%20Z%27%20fill%3D%27%230a1620%27%20fill-opacity%3D%270.92%27/%3E%3Cline%20x1%3D%2722%27%20y1%3D%2712%27%20x2%3D%2716%27%20y2%3D%272%27%20stroke%3D%27%230a1620%27%20stroke-width%3D%271.4%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%272%27%20r%3D%272.6%27%20fill%3D%27%23e9c785%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%272%27%20r%3D%275%27%20fill%3D%27%23e9c785%27%20opacity%3D%270.35%27/%3E%3Ccircle%20cx%3D%2724%27%20cy%3D%2718%27%20r%3D%271.4%27%20fill%3D%27%23e9c785%27%20opacity%3D%270.7%27/%3E%3C/svg%3E");
-  }
-  .era[data-zone="the-abyss"] .era-head::after{ content:none; }
   @keyframes swim{
     0%,100%{ transform:translateX(0); }
-    50%{ transform:translateX(-16px); }
-  }
-  .era[data-zone="sunlight-zone"] .era-head::after,
-  .era[data-zone="twilight-zone"] .era-head::after,
-  .era[data-zone="midnight-zone"] .era-head::after{
-    transform:scaleX(-1) translateX(0);
-    animation-name:swim-flipped;
+    50%{ transform:translateX(-18px); }
   }
   @keyframes swim-flipped{
     0%,100%{ transform:scaleX(-1) translateX(0); }
-    50%{ transform:scaleX(-1) translateX(-16px); }
+    50%{ transform:scaleX(-1) translateX(-18px); }
   }
 
   .grid{
@@ -547,7 +514,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .wave, .eyebrow .pulse, .bubble, .dive-cue svg, .era-head::before, .era-head::after,
+    .wave, .eyebrow .pulse, .bubble, .dive-cue svg, .fish-swarm span,
     footer .caustics, footer .flora span{ animation:none !important; }
     .bubbles{ display:none; }
     html{ scroll-behavior:auto; }
@@ -676,6 +643,60 @@ function eraFor(year){
   return ERA_DEFS.find(e => year >= e.from && year <= e.to) || {label:"Other Years", zone:"other-years", note:"", from:year, to:year};
 }
 
+// A small swarm of fish per depth zone. Each entry:
+// [svgKey, widthPx, heightPx, topPx, sidePercent, side('left'|'right'),
+//  opacity, animDurationSec, animDelaySec, flip(bool)]
+const FISH_URIS = {
+  sunlight_orange: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23ef9d5f%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23ef9d5f%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  sunlight_yellow: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23f0ca55%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23f0ca55%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  sunlight_coral: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23e8735a%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23e8735a%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  twilight_blue: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%236b9bbd%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%236b9bbd%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  twilight_silver: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%238fbccb%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%238fbccb%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  twilight_deep: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%234a7fa0%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%234a7fa0%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  midnight_slate: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%233f6478%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%233f6478%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  midnight_teal: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23325668%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23325668%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  midnight_pale: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%3Cpath%20d%3D%27M6%2015%20L18%208%20Q34%204%2050%2015%20Q34%2026%2018%2022%20Z%27%20fill%3D%27%23527d90%27%20fill-opacity%3D%270.9%27/%3E%3Cpath%20d%3D%27M6%2015%20L0%208%20L0%2022%20Z%27%20fill%3D%27%23527d90%27%20fill-opacity%3D%270.9%27/%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23000%27%20opacity%3D%270.7%27/%3E%3C/svg%3E",
+  angler: "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2034%27%3E%3Cpath%20d%3D%27M6%2020%20L20%2012%20Q36%208%2052%2019%20Q36%2030%2020%2026%20Z%27%20fill%3D%27%2316283a%27%20fill-opacity%3D%270.95%27/%3E%3Cpath%20d%3D%27M6%2020%20L0%2013%20L0%2027%20Z%27%20fill%3D%27%2316283a%27%20fill-opacity%3D%270.95%27/%3E%3Cline%20x1%3D%2722%27%20y1%3D%2712%27%20x2%3D%2716%27%20y2%3D%272%27%20stroke%3D%27%2316283a%27%20stroke-width%3D%271.6%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%272%27%20r%3D%272.8%27%20fill%3D%27%23e9c785%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%272%27%20r%3D%275.5%27%20fill%3D%27%23e9c785%27%20opacity%3D%270.4%27/%3E%3Ccircle%20cx%3D%2724%27%20cy%3D%2718%27%20r%3D%271.6%27%20fill%3D%27%23e9c785%27%20opacity%3D%270.8%27/%3E%3C/svg%3E",
+};
+
+const FISH_BY_ZONE = {
+  "sunlight-zone": [
+    { key:"sunlight_orange", w:52, h:26, top:-6,  side:"right", pos:6,  opacity:0.95, dur:8,  delay:0,   flip:false },
+    { key:"sunlight_yellow", w:36, h:18, top:34,  side:"right", pos:24, opacity:0.9,  dur:6.5,delay:1.2, flip:true  },
+    { key:"sunlight_coral",  w:44, h:22, top:4,   side:"left",  pos:4,  opacity:0.92, dur:7.5,delay:0.6, flip:true  },
+    { key:"sunlight_yellow", w:28, h:14, top:56,  side:"left",  pos:20, opacity:0.85, dur:9,  delay:2,   flip:false },
+  ],
+  "twilight-zone": [
+    { key:"twilight_blue",   w:46, h:23, top:-4,  side:"right", pos:8,  opacity:0.9,  dur:9,  delay:0,   flip:false },
+    { key:"twilight_silver", w:32, h:16, top:38,  side:"right", pos:26, opacity:0.82, dur:7,  delay:1.6, flip:true  },
+    { key:"twilight_deep",   w:38, h:19, top:8,   side:"left",  pos:6,  opacity:0.85, dur:8.5,delay:0.8, flip:true  },
+    { key:"twilight_silver", w:24, h:12, top:58,  side:"left",  pos:22, opacity:0.75, dur:10, delay:2.4, flip:false },
+  ],
+  "midnight-zone": [
+    { key:"midnight_slate",  w:42, h:21, top:-2,  side:"right", pos:7,  opacity:0.8,  dur:10, delay:0,   flip:false },
+    { key:"midnight_teal",   w:28, h:14, top:36,  side:"right", pos:25, opacity:0.7,  dur:8,  delay:1.4, flip:true  },
+    { key:"midnight_pale",   w:34, h:17, top:10,  side:"left",  pos:5,  opacity:0.75, dur:9.5,delay:0.7, flip:true  },
+    { key:"midnight_slate",  w:22, h:11, top:56,  side:"left",  pos:24, opacity:0.62, dur:11, delay:2.2, flip:false },
+  ],
+  "the-abyss": [
+    { key:"angler", w:54, h:31, top:-10, side:"right", pos:6,  opacity:0.95, dur:12, delay:0,   flip:false },
+    { key:"angler", w:36, h:20, top:44,  side:"left",  pos:8,  opacity:0.85, dur:13, delay:2.5, flip:true  },
+  ],
+};
+
+function renderFishSwarm(zone){
+  const fishList = FISH_BY_ZONE[zone];
+  if(!fishList) return '';
+  const spans = fishList.map(f => {
+    const uri = FISH_URIS[f.key];
+    const sideStyle = f.side === 'right' ? `right:${f.pos}%;` : `left:${f.pos}%;`;
+    const animName = f.flip ? 'swim-flipped' : 'swim';
+    const baseTransform = f.flip ? 'scaleX(-1)' : 'none';
+    return `<span style="width:${f.w}px;height:${f.h}px;top:${f.top}px;${sideStyle}opacity:${f.opacity};transform:${baseTransform};animation-name:${animName};animation-duration:${f.dur}s;animation-delay:${f.delay}s;background-image:url('${uri}');"></span>`;
+  }).join('');
+  return `<div class="fish-swarm" aria-hidden="true">${spans}</div>`;
+}
+
 // ---- populate stat readout ----
 const uniqFilms = new Set(SONGS.filter(s=>s.film!=="Non-Film Single").map(s=>s.film));
 const years = SONGS.map(s=>s.year);
@@ -801,6 +822,7 @@ function render(){
   let html = '';
   for(const {era, items} of groups.values()){
     html += `<section class="era" data-zone="${era.zone}">
+      ${renderFishSwarm(era.zone)}
       <div class="era-head">
         <h2>${era.label}</h2>
         <span class="years">${era.from}–${era.to}</span>
