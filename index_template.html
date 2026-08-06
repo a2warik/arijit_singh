@@ -477,6 +477,12 @@
   .card .vocalists{
     display:flex; flex-wrap:wrap; gap:5px; margin-top:2px;
   }
+  .card .song-note{
+    margin-top:12px; padding-top:10px;
+    border-top:1px dashed var(--line);
+    font-size:0.72rem; line-height:1.55; font-style:italic;
+    color:var(--ink-faint);
+  }
   .chip{
     font-size:0.72rem; padding:2px 9px; border-radius:999px;
     border:1px solid var(--line-strong); color:var(--ink-muted);
@@ -647,10 +653,10 @@
 </footer>
 
 <script>
-// This data comes straight from the normalized SQLAlchemy database via
-// export_json.py: each song already carries resolved composer/lyricist/
-// vocalist NAMES (joined from their own tables), but the underlying
-// database stores each of those names exactly once.
+// This data comes from the full Wikipedia-sourced song list via
+// export_json_from_csv.py: each song already carries resolved composer/
+// lyricist/vocalist/actor names, split from the CSV's comma- and
+// slash-separated fields.
 const DATA = __ARCHIVE_JSON__;
 const SONGS = DATA.songs;
 
@@ -659,6 +665,7 @@ const ERA_DEFS = [
   {label:"Twilight Zone", zone:"twilight-zone", note:"An entire generation of soundtracks", from:2014, to:2016},
   {label:"Midnight Zone", zone:"midnight-zone", note:"Every soundtrack needed that one Arijit song", from:2017, to:2019},
   {label:"The Abyss", zone:"the-abyss", note:"Streaming era, same soul, deeper still", from:2020, to:2023},
+  {label:"Hadal Zone", zone:"hadal-zone", note:"The deepest trench — still singing", from:2024, to:2026},
 ];
 
 function eraFor(year){
@@ -703,6 +710,9 @@ const FISH_BY_ZONE = {
   "the-abyss": [
     { key:"angler", w:54, h:31, top:-10, side:"right", pos:6,  opacity:0.95, dur:12, delay:0,   flip:false },
     { key:"angler", w:36, h:20, top:44,  side:"left",  pos:8,  opacity:0.85, dur:13, delay:2.5, flip:true  },
+  ],
+  "hadal-zone": [
+    { key:"angler", w:26, h:15, top:20,  side:"right", pos:10, opacity:0.45, dur:15, delay:1,   flip:false },
   ],
 };
 
@@ -862,6 +872,7 @@ function render(){
           <div><span class="k">Music</span><span>${s.composers.join(', ')}</span></div>
           ${s.actors.length ? `<div><span class="k">On-screen</span><span>${s.actors.join(', ')}</span></div>` : ''}
         </div>
+        ${s.note ? `<div class="song-note">${s.note}</div>` : ''}
       </article>`;
     }
     html += `</div></section>`;
