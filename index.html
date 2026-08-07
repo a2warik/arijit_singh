@@ -89,15 +89,27 @@
   .top nav a{text-decoration:none; transition:color .2s;}
   .top nav a:hover{color:var(--gold-soft);}
 
-  /* ---------- hero ---------- */
+  /* ---------- hero: above the waterline -- dusk sky over the beach, ---------- */
+  /* not underwater, so no bubbles here (z-index lifts it above .bubbles) */
   .hero{
     position:relative;
+    z-index:1;
     padding:clamp(70px,12vw,130px) clamp(20px,6vw,64px) 60px;
     overflow:hidden;
     text-align:center;
     background:
-      radial-gradient(60% 55% at 50% 18%, rgba(216,166,75,0.16), transparent 70%),
-      radial-gradient(80% 60% at 50% 100%, rgba(194,90,109,0.10), transparent 70%);
+      radial-gradient(50% 42% at 50% 13%, rgba(255,214,140,0.35), transparent 70%),
+      radial-gradient(75% 45% at 50% 100%, rgba(216,166,75,0.22), transparent 70%),
+      linear-gradient(180deg,
+        #081c2c 0%,
+        #0d3550 24%,
+        #173f52 46%,
+        #1f4a4a 64%,
+        #2c4f3e 80%,
+        #3c5238 92%,
+        #7d7248 97%,
+        #ddc182 100%
+      );
   }
   .hero::before{
     content:"";
@@ -108,6 +120,25 @@
     filter:blur(10px);
     pointer-events:none;
   }
+  /* a handful of gulls and cloud puffs -- open sky, not open water */
+  .sky-scene{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+  .cloud-puff{
+    position:absolute; border-radius:50%;
+    background:radial-gradient(circle, rgba(234,246,246,0.16), transparent 72%);
+    filter:blur(6px);
+  }
+  .cloud-puff.c1{ width:260px; height:70px; top:9%; left:6%; }
+  .cloud-puff.c2{ width:200px; height:56px; top:16%; right:10%; }
+  .cloud-puff.c3{ width:170px; height:48px; top:27%; left:24%; opacity:0.7; }
+  .sky-gull{
+    position:absolute; width:22px; height:11px;
+    color:rgba(234,246,246,0.55);
+    animation:flit 7s ease-in-out infinite;
+  }
+  .sky-gull.g1{ top:13%; left:14%; }
+  .sky-gull.g2{ top:9%;  left:23%; width:16px; height:8px; animation-delay:1.4s; }
+  .sky-gull.g3{ top:19%; right:16%; animation-delay:0.7s; }
+  .sky-gull.g4{ top:8%;  right:26%; width:15px; height:8px; animation-delay:2.1s; }
   .eyebrow{
     display:inline-flex; align-items:center; gap:10px;
     font-family:'IBM Plex Mono', monospace;
@@ -253,7 +284,8 @@
     display:flex; flex-wrap:wrap; justify-content:center; gap:0;
     max-width:760px; margin:0 auto;
     border:1px solid var(--line); border-radius:14px;
-    overflow:hidden; background:rgba(245,236,223,0.02);
+    overflow:hidden; background:rgba(4,13,22,0.4);
+    backdrop-filter:blur(8px);
   }
   .readout .stat{
     flex:1 1 140px; padding:20px 16px; text-align:center;
@@ -544,7 +576,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .tide, .gull, .eyebrow .pulse, .bubble, .dive-cue svg, .fish-swarm span,
+    .tide, .gull, .sky-gull, .eyebrow .pulse, .bubble, .dive-cue svg, .fish-swarm span,
     footer .caustics, footer .flora span{ animation:none !important; }
     .bubbles{ display:none; }
     html{ scroll-behavior:auto; }
@@ -565,6 +597,15 @@
 </header>
 
 <section class="hero">
+  <div class="sky-scene" aria-hidden="true">
+    <div class="cloud-puff c1"></div>
+    <div class="cloud-puff c2"></div>
+    <div class="cloud-puff c3"></div>
+    <svg class="sky-gull g1" viewBox="0 0 24 12"><path d="M2 8 q4 -7 8 0 q4 -7 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <svg class="sky-gull g2" viewBox="0 0 24 12"><path d="M2 8 q4 -7 8 0 q4 -7 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <svg class="sky-gull g3" viewBox="0 0 24 12"><path d="M2 8 q4 -7 8 0 q4 -7 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <svg class="sky-gull g4" viewBox="0 0 24 12"><path d="M2 8 q4 -7 8 0 q4 -7 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </div>
   <div class="eyebrow"><span class="pulse"></span> A fan-built song archive</div>
   <h1 class="title">Every song has<br><em>a voice</em> behind it.</h1>
   <p class="sub">A growing, searchable record of Bollywood songs sung by Arijit Singh — film, year, co-vocalists, lyricist and composer, all in one place.</p>
