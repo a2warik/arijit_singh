@@ -275,47 +275,54 @@
     display:block; margin-top:14px; color:var(--rose);
     letter-spacing:0.04em;
   }
-  /* stats readout -- drifting like the cloud-puffs overhead, not */
-  /* a UI panel: soft frosted body plus a couple of bulging puffs */
-  /* fused to the top edge so the whole thing reads as one cloud. */
-  .readout{
+  /* stats readout -- four separate clouds of different builds and sizes, */
+  /* drifting at different heights like the cloud-puffs overhead, each */
+  /* one carrying a single number instead of sitting in a table row. */
+  .stat-clouds{
     position:relative; z-index:1;
-    display:flex; flex-wrap:wrap; justify-content:center; gap:0;
-    max-width:760px; margin:8px auto 44px;
-    border-radius:36px;
-    overflow:visible;
-    background:
-      radial-gradient(120% 160% at 50% 0%, rgba(255,255,255,0.24), rgba(255,255,255,0.07) 55%, transparent 80%),
-      rgba(234,246,246,0.1);
-    box-shadow:0 16px 44px rgba(3,10,18,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
-    backdrop-filter:blur(16px);
+    display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:center;
+    gap:clamp(2px,2vw,22px);
+    max-width:900px; margin:14px auto 48px; padding:0 20px;
   }
-  .readout::before, .readout::after{
-    content:""; position:absolute; z-index:-1; border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, rgba(255,255,255,0.3), rgba(255,255,255,0.04) 70%);
-    filter:blur(3px);
+  .stat-cloud{ position:relative; }
+  .cloud-float{ position:relative; animation:cloud-bob 7s ease-in-out infinite; }
+  @keyframes cloud-bob{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-9px); }
   }
-  .readout::before{ width:110px; height:64px; top:-24px; left:34px; }
-  .readout::after{ width:150px; height:76px; top:-30px; right:26px; }
-  .readout .stat{
+  .cloud-shape{
+    position:absolute; inset:0; width:100%; height:100%; z-index:0;
+    filter:drop-shadow(0 14px 26px rgba(3,10,18,0.4));
+  }
+  .cloud-shape path{ stroke:rgba(255,255,255,0.28); stroke-width:1.5; }
+  .stat-content{
     position:relative; z-index:1;
-    flex:1 1 140px; padding:22px 16px; text-align:center;
-    border-right:1px solid rgba(234,246,246,0.16);
+    height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:10px 14px;
   }
-  .readout .stat:first-child{ border-top-left-radius:36px; border-bottom-left-radius:36px; }
-  .readout .stat:last-child{
-    border-right:none;
-    border-top-right-radius:36px; border-bottom-right-radius:36px;
-  }
-  .readout .stat b{
+  .stat-content b{
     display:block; font-family:'Fraunces', serif; font-weight:600;
-    font-size:1.8rem; color:var(--gold-soft); line-height:1;
-    margin-bottom:6px;
+    font-size:1.6rem; color:var(--gold-soft); line-height:1;
+    margin-bottom:5px;
     text-shadow:0 1px 12px rgba(4,13,22,0.4);
   }
-  .readout .stat span{
-    font-family:'IBM Plex Mono', monospace; font-size:0.66rem;
-    letter-spacing:0.12em; text-transform:uppercase; color:rgba(234,246,246,0.72);
+  .stat-content span{
+    font-family:'IBM Plex Mono', monospace; font-size:0.6rem;
+    letter-spacing:0.1em; text-transform:uppercase; color:rgba(234,246,246,0.72);
+  }
+  /* four builds: a big lopsided one, a small tight puff, a wide low */
+  /* drifter, and a tall fluffy one -- no two the same silhouette */
+  .cloud-1{ transform:rotate(-2deg); }
+  .cloud-1 > .cloud-float{ width:220px; height:128px; margin-bottom:8px; animation-duration:7.4s; }
+  .cloud-2{ transform:rotate(3deg); }
+  .cloud-2 > .cloud-float{ width:138px; height:92px; margin-bottom:38px; animation-duration:6.1s; animation-delay:0.6s; }
+  .cloud-3{ transform:rotate(-1.5deg); }
+  .cloud-3 > .cloud-float{ width:168px; height:98px; margin-bottom:2px; animation-duration:6.8s; animation-delay:1.3s; }
+  .cloud-4{ transform:rotate(2deg); }
+  .cloud-4 > .cloud-float{ width:196px; height:118px; margin-bottom:28px; animation-duration:7.9s; animation-delay:0.3s; }
+  @media(max-width:560px){
+    .stat-clouds{ align-items:center; }
+    .cloud-1 > .cloud-float, .cloud-2 > .cloud-float, .cloud-3 > .cloud-float, .cloud-4 > .cloud-float{ margin-bottom:0; }
   }
 
   /* ---------- controls ---------- */
@@ -593,7 +600,7 @@
 
   @media (prefers-reduced-motion: reduce){
     .sky-gull, .eyebrow .pulse, .bubble, .fish-swarm span,
-    .star, footer .caustics, footer .flora span{ animation:none !important; }
+    .star, footer .caustics, footer .flora span, .cloud-float{ animation:none !important; }
     .bubbles{ display:none; }
     html{ scroll-behavior:auto; }
   }
@@ -660,11 +667,67 @@
   </div>
   <div class="eyebrow"><span class="pulse"></span> A fan-built song archive</div>
 
-  <div class="readout" id="statReadout">
-    <div class="stat"><b id="statSongs">—</b><span>Songs archived</span></div>
-    <div class="stat"><b id="statFilms">—</b><span>Films</span></div>
-    <div class="stat"><b id="statYears">—</b><span>Years spanned</span></div>
-    <div class="stat"><b id="statComposers">—</b><span>Actors featured</span></div>
+  <div class="stat-clouds" id="statReadout">
+    <div class="stat-cloud cloud-1">
+      <div class="cloud-float">
+        <svg class="cloud-shape" viewBox="0 0 220 128" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="cg1" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.34)"/>
+              <stop offset="55%" stop-color="rgba(234,246,246,0.15)"/>
+              <stop offset="100%" stop-color="rgba(234,246,246,0.06)"/>
+            </radialGradient>
+          </defs>
+          <path fill="url(#cg1)" d="M46,106 C22,106 6,88 8,68 C10,48 28,36 46,40 C48,18 72,2 100,8 C120,-8 154,-4 168,16 C192,12 214,28 208,50 C230,52 236,74 220,88 C224,106 204,118 186,112 C176,124 152,126 136,116 C118,128 90,126 76,114 C62,122 48,116 46,106 Z"/>
+        </svg>
+        <div class="stat-content"><b id="statSongs">—</b><span>Songs archived</span></div>
+      </div>
+    </div>
+    <div class="stat-cloud cloud-2">
+      <div class="cloud-float">
+        <svg class="cloud-shape" viewBox="0 0 138 92" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="cg2" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.34)"/>
+              <stop offset="55%" stop-color="rgba(234,246,246,0.15)"/>
+              <stop offset="100%" stop-color="rgba(234,246,246,0.06)"/>
+            </radialGradient>
+          </defs>
+          <path fill="url(#cg2)" d="M32,74 C16,74 6,62 9,48 C11,35 25,28 36,31 C39,15 58,4 76,10 C92,1 114,7 118,22 C132,23 138,36 130,46 C136,58 128,71 114,68 C108,78 90,80 78,72 C64,80 46,78 38,72 C32,77 32,74 32,74 Z"/>
+        </svg>
+        <div class="stat-content"><b id="statFilms">—</b><span>Films</span></div>
+      </div>
+    </div>
+    <div class="stat-cloud cloud-3">
+      <div class="cloud-float">
+        <svg class="cloud-shape" viewBox="0 0 168 98" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="cg3" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.34)"/>
+              <stop offset="55%" stop-color="rgba(234,246,246,0.15)"/>
+              <stop offset="100%" stop-color="rgba(234,246,246,0.06)"/>
+            </radialGradient>
+          </defs>
+          <path fill="url(#cg3)" d="M36,82 C16,82 4,66 8,50 C11,34 30,24 44,28 C48,10 72,-2 96,4 C116,-6 144,2 148,20 C164,20 172,38 162,50 C168,66 152,80 134,74 C126,86 102,88 88,78 C70,88 48,86 40,80 C36,84 36,82 36,82 Z"/>
+        </svg>
+        <div class="stat-content"><b id="statYears">—</b><span>Years spanned</span></div>
+      </div>
+    </div>
+    <div class="stat-cloud cloud-4">
+      <div class="cloud-float">
+        <svg class="cloud-shape" viewBox="0 0 196 118" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="cg4" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.34)"/>
+              <stop offset="55%" stop-color="rgba(234,246,246,0.15)"/>
+              <stop offset="100%" stop-color="rgba(234,246,246,0.06)"/>
+            </radialGradient>
+          </defs>
+          <path fill="url(#cg4)" d="M42,98 C20,98 6,80 10,62 C12,44 30,32 46,36 C50,14 76,0 102,8 C124,-8 156,-2 168,18 C188,18 198,38 188,54 C196,72 180,88 160,82 C152,96 126,100 110,90 C92,100 66,98 54,88 C48,96 44,100 42,98 Z"/>
+        </svg>
+        <div class="stat-content"><b id="statComposers">—</b><span>Actors featured</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="lyric-dive">
