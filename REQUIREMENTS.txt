@@ -17,6 +17,7 @@ debugpy==1.8.21
 defusedxml==0.7.1
 executing==2.2.1
 fastjsonschema==2.22.1
+flatbuffers==25.12.19
 fqdn==1.5.1
 greenlet==3.5.4
 h11==0.16.0
@@ -60,15 +61,18 @@ nest-asyncio2==1.7.2
 notebook==7.6.1
 notebook_shim==0.2.4
 numpy==2.5.1
+onnxruntime==1.28.0
 packaging==26.2
 pandas==3.0.5
 pandas-stubs==3.0.5.260730
 pandocfilters==1.5.1
 parso==0.8.7
 pexpect==4.9.0
+pillow==12.3.0
 platformdirs==4.11.0
 prometheus_client==0.26.0
 prompt_toolkit==3.0.53
+protobuf==7.35.1
 psutil==7.2.2
 ptyprocess==0.7.0
 pure_eval==0.2.3
