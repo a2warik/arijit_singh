@@ -286,7 +286,7 @@
   .readout{
     position:relative; z-index:1;
     display:flex; flex-wrap:wrap; justify-content:center; gap:0;
-    max-width:760px; margin:0 auto;
+    max-width:760px; margin:0 auto 44px;
     border:1px solid var(--line); border-radius:14px;
     overflow:hidden; background:rgba(4,13,22,0.4);
     backdrop-filter:blur(8px);
@@ -657,6 +657,13 @@
     </p>
   </div>
 
+  <div class="readout" id="statReadout">
+    <div class="stat"><b id="statSongs">—</b><span>Songs archived</span></div>
+    <div class="stat"><b id="statFilms">—</b><span>Films</span></div>
+    <div class="stat"><b id="statYears">—</b><span>Years spanned</span></div>
+    <div class="stat"><b id="statComposers">—</b><span>Actors featured</span></div>
+  </div>
+
   <div class="stage-art" aria-hidden="true">
     <div class="sun-glow"></div>
     <div class="portrait-ground"></div>
@@ -667,13 +674,6 @@
   <div class="dive-cue">
     Scroll to dive in
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
-  </div>
-
-  <div class="readout" id="statReadout">
-    <div class="stat"><b id="statSongs">—</b><span>Songs archived</span></div>
-    <div class="stat"><b id="statFilms">—</b><span>Films</span></div>
-    <div class="stat"><b id="statYears">—</b><span>Years spanned</span></div>
-    <div class="stat"><b id="statComposers">—</b><span>Actors featured</span></div>
   </div>
 </section>
 
