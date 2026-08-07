@@ -28,7 +28,7 @@ songs = (
 
 song_data = []
 for s in songs:
-    song_data.append({
+    entry = {
         "id": s.id,
         "title": s.title,
         "film": s.film.name,
@@ -40,7 +40,12 @@ for s in songs:
             {"name": link.vocalist.name, "is_lead": link.is_lead}
             for link in s.vocalists
         ],
-    })
+    }
+    if s.actor_note:
+        entry["note"] = s.actor_note
+    if s.youtube_url:
+        entry["youtube_url"] = s.youtube_url
+    song_data.append(entry)
 
 def role_list(model):
     rows = session.query(model).all()

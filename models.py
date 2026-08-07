@@ -158,6 +158,10 @@ class Song(Base):
     title = Column(String, nullable=False)
     film_id = Column(ForeignKey("films.id"), nullable=False)
     youtube_url = Column(String, nullable=True)
+    # why an ambiguous/dual-lead male-actor pick was made (e.g. multi-hero
+    # films, biopics, or films judged to have no real male lead) -- only
+    # set when the choice isn't obvious; most songs leave this null.
+    actor_note = Column(String, nullable=True)
 
     film = relationship("Film", back_populates="songs")
     composers = relationship("Composer", secondary=song_composers, back_populates="songs")
