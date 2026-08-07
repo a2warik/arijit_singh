@@ -10706,6 +10706,25 @@
       ]
     },
     {
+      "id": 477,
+      "title": "Sukoon",
+      "film": "Bhoomi",
+      "year": 2025,
+      "composers": [
+        "Salim-Sulaiman"
+      ],
+      "lyricists": [
+        "Shraddha Pandit"
+      ],
+      "actors": [],
+      "vocalists": [
+        {
+          "name": "Arijit Singh",
+          "is_lead": true
+        }
+      ]
+    },
+    {
       "id": 457,
       "title": "Tere Ishk Mein",
       "film": "Tere Ishk Mein",
@@ -11443,6 +11462,10 @@
       "count": 2
     },
     {
+      "name": "Salim-Sulaiman",
+      "count": 2
+    },
+    {
       "name": "Samira Koppikar",
       "count": 2
     },
@@ -11664,10 +11687,6 @@
     },
     {
       "name": "Sachet – Parampara",
-      "count": 1
-    },
-    {
-      "name": "Salim-Sulaiman",
       "count": 1
     },
     {
@@ -11929,6 +11948,10 @@
       "count": 2
     },
     {
+      "name": "Shraddha Pandit",
+      "count": 2
+    },
+    {
       "name": "Shweta Raaj",
       "count": 2
     },
@@ -12182,10 +12205,6 @@
     },
     {
       "name": "Shloke Lal",
-      "count": 1
-    },
-    {
-      "name": "Shraddha Pandit",
       "count": 1
     },
     {
