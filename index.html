@@ -275,28 +275,47 @@
     display:block; margin-top:14px; color:var(--rose);
     letter-spacing:0.04em;
   }
-  /* stats readout */
+  /* stats readout -- drifting like the cloud-puffs overhead, not */
+  /* a UI panel: soft frosted body plus a couple of bulging puffs */
+  /* fused to the top edge so the whole thing reads as one cloud. */
   .readout{
     position:relative; z-index:1;
     display:flex; flex-wrap:wrap; justify-content:center; gap:0;
-    max-width:760px; margin:0 auto 44px;
-    border:1px solid var(--line); border-radius:14px;
-    overflow:hidden; background:rgba(4,13,22,0.4);
-    backdrop-filter:blur(8px);
+    max-width:760px; margin:8px auto 44px;
+    border-radius:36px;
+    overflow:visible;
+    background:
+      radial-gradient(120% 160% at 50% 0%, rgba(255,255,255,0.24), rgba(255,255,255,0.07) 55%, transparent 80%),
+      rgba(234,246,246,0.1);
+    box-shadow:0 16px 44px rgba(3,10,18,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+    backdrop-filter:blur(16px);
   }
+  .readout::before, .readout::after{
+    content:""; position:absolute; z-index:-1; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, rgba(255,255,255,0.3), rgba(255,255,255,0.04) 70%);
+    filter:blur(3px);
+  }
+  .readout::before{ width:110px; height:64px; top:-24px; left:34px; }
+  .readout::after{ width:150px; height:76px; top:-30px; right:26px; }
   .readout .stat{
-    flex:1 1 140px; padding:20px 16px; text-align:center;
-    border-right:1px solid var(--line);
+    position:relative; z-index:1;
+    flex:1 1 140px; padding:22px 16px; text-align:center;
+    border-right:1px solid rgba(234,246,246,0.16);
   }
-  .readout .stat:last-child{border-right:none;}
+  .readout .stat:first-child{ border-top-left-radius:36px; border-bottom-left-radius:36px; }
+  .readout .stat:last-child{
+    border-right:none;
+    border-top-right-radius:36px; border-bottom-right-radius:36px;
+  }
   .readout .stat b{
     display:block; font-family:'Fraunces', serif; font-weight:600;
     font-size:1.8rem; color:var(--gold-soft); line-height:1;
     margin-bottom:6px;
+    text-shadow:0 1px 12px rgba(4,13,22,0.4);
   }
   .readout .stat span{
     font-family:'IBM Plex Mono', monospace; font-size:0.66rem;
-    letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint);
+    letter-spacing:0.12em; text-transform:uppercase; color:rgba(234,246,246,0.72);
   }
 
   /* ---------- controls ---------- */
@@ -641,6 +660,13 @@
   </div>
   <div class="eyebrow"><span class="pulse"></span> A fan-built song archive</div>
 
+  <div class="readout" id="statReadout">
+    <div class="stat"><b id="statSongs">—</b><span>Songs archived</span></div>
+    <div class="stat"><b id="statFilms">—</b><span>Films</span></div>
+    <div class="stat"><b id="statYears">—</b><span>Years spanned</span></div>
+    <div class="stat"><b id="statComposers">—</b><span>Actors featured</span></div>
+  </div>
+
   <div class="lyric-dive">
     <div class="tag">from "Sukoon"</div>
     <p>Jhaank loon khud mein zaraa, sab kuch hai andar mere<br>
@@ -648,13 +674,6 @@
        Dilke andar dekh kar apanee rooh ko jaanunga
        <span class="refrain">Dubegaa<br>Dubegaa</span>
     </p>
-  </div>
-
-  <div class="readout" id="statReadout">
-    <div class="stat"><b id="statSongs">—</b><span>Songs archived</span></div>
-    <div class="stat"><b id="statFilms">—</b><span>Films</span></div>
-    <div class="stat"><b id="statYears">—</b><span>Years spanned</span></div>
-    <div class="stat"><b id="statComposers">—</b><span>Actors featured</span></div>
   </div>
 
   <div class="stage-art" aria-hidden="true">
