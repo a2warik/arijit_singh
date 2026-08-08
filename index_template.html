@@ -799,7 +799,7 @@
       <input id="search" type="text" placeholder="Search a song or film title…" autocomplete="off">
     </div>
     <select id="yearFilter"><option value="">All years</option></select>
-    <select id="composerFilter"><option value="">All composers</option></select>
+    <select id="filmFilter"><option value="">All films</option></select>
     <span class="count-tag"><b id="resultCount">0</b> songs showing</span>
   </div>
 </div>
@@ -929,9 +929,9 @@ const yearFilter = document.getElementById('yearFilter');
 [...new Set(years)].sort((a,b)=>b-a).forEach(y=>{
   const o = document.createElement('option'); o.value=y; o.textContent=y; yearFilter.appendChild(o);
 });
-const composerFilter = document.getElementById('composerFilter');
-DATA.composers.map(c=>c.name).sort().forEach(c=>{
-  const o = document.createElement('option'); o.value=c; o.textContent=c; composerFilter.appendChild(o);
+const filmFilter = document.getElementById('filmFilter');
+[...new Set(SONGS.map(s=>s.film))].sort().forEach(f=>{
+  const o = document.createElement('option'); o.value=f; o.textContent=f; filmFilter.appendChild(o);
 });
 
 const searchInput = document.getElementById('search');
@@ -1012,14 +1012,14 @@ roleTabs.forEach(tab=>{
 function render(){
   const q = searchInput.value.trim().toLowerCase();
   const yf = yearFilter.value;
-  const cf = composerFilter.value;
+  const ff = filmFilter.value;
 
   let filtered = SONGS.filter(s=>{
     const matchesQ = !q || s.title.toLowerCase().includes(q) || s.film.toLowerCase().includes(q);
     const matchesY = !yf || String(s.year) === yf;
-    const matchesC = !cf || s.composers.includes(cf);
+    const matchesF = !ff || s.film === ff;
     const matchesP = songMatchesPerson(s);
-    return matchesQ && matchesY && matchesC && matchesP;
+    return matchesQ && matchesY && matchesF && matchesP;
   });
 
   resultCount.textContent = filtered.length;
@@ -1069,7 +1069,7 @@ function render(){
 
 searchInput.addEventListener('input', render);
 yearFilter.addEventListener('change', render);
-composerFilter.addEventListener('change', render);
+filmFilter.addEventListener('change', render);
 
 render();
 
