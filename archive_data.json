@@ -11266,232 +11266,8 @@
   ],
   "composers": [
     {
-      "name": "Pritam Chakraborty",
-      "count": 62
-    },
-    {
-      "name": "Pritam",
-      "count": 47
-    },
-    {
-      "name": "Mithoon",
-      "count": 30
-    },
-    {
-      "name": "Amit Trivedi",
-      "count": 25
-    },
-    {
-      "name": "Jeet Gannguli",
-      "count": 25
-    },
-    {
       "name": "A. R. Rahman",
       "count": 18
-    },
-    {
-      "name": "Amaal Mallik",
-      "count": 14
-    },
-    {
-      "name": "Shankar–Ehsaan–Loy",
-      "count": 14
-    },
-    {
-      "name": "Vishal Bhardwaj",
-      "count": 14
-    },
-    {
-      "name": "Sachin–Jigar",
-      "count": 12
-    },
-    {
-      "name": "Tanishk Bagchi",
-      "count": 10
-    },
-    {
-      "name": "Himesh Reshammiya",
-      "count": 9
-    },
-    {
-      "name": "Vishal–Shekhar",
-      "count": 8
-    },
-    {
-      "name": "Salim–Sulaiman",
-      "count": 7
-    },
-    {
-      "name": "Arijit Singh",
-      "count": 6
-    },
-    {
-      "name": "Ram Sampath",
-      "count": 6
-    },
-    {
-      "name": "Rochak Kohli",
-      "count": 6
-    },
-    {
-      "name": "JAM8",
-      "count": 5
-    },
-    {
-      "name": "Meet Bros",
-      "count": 5
-    },
-    {
-      "name": "Palash Muchhal",
-      "count": 5
-    },
-    {
-      "name": "Sajid–Wajid",
-      "count": 5
-    },
-    {
-      "name": "Jasleen Royal",
-      "count": 4
-    },
-    {
-      "name": "Sanjay Leela Bhansali",
-      "count": 4
-    },
-    {
-      "name": "Sharib–Toshi",
-      "count": 4
-    },
-    {
-      "name": "Shashwat Sachdev",
-      "count": 4
-    },
-    {
-      "name": "Vishal Mishra",
-      "count": 4
-    },
-    {
-      "name": "Ankit Tiwari",
-      "count": 3
-    },
-    {
-      "name": "Chirantan Bhatt",
-      "count": 3
-    },
-    {
-      "name": "Sachin-Jigar",
-      "count": 3
-    },
-    {
-      "name": "Shreyas Puranik",
-      "count": 3
-    },
-    {
-      "name": "Somesh Saha",
-      "count": 3
-    },
-    {
-      "name": "Amartya Bobo Rahut",
-      "count": 2
-    },
-    {
-      "name": "Amartya Rahut",
-      "count": 2
-    },
-    {
-      "name": "Anirudh Ravichander",
-      "count": 2
-    },
-    {
-      "name": "Anu Malik",
-      "count": 2
-    },
-    {
-      "name": "Anurag Saikia",
-      "count": 2
-    },
-    {
-      "name": "Arjuna Harjai",
-      "count": 2
-    },
-    {
-      "name": "Arko Pravo Mukherjee",
-      "count": 2
-    },
-    {
-      "name": "Asad Khan",
-      "count": 2
-    },
-    {
-      "name": "Bobby–Imran",
-      "count": 2
-    },
-    {
-      "name": "Clinton Cerejo",
-      "count": 2
-    },
-    {
-      "name": "Gaurav Dagaonkar",
-      "count": 2
-    },
-    {
-      "name": "Kashi-Richard",
-      "count": 2
-    },
-    {
-      "name": "Laxmikant-Pyarelal (Recreated by Arko Pravo Mukherjee)",
-      "count": 2
-    },
-    {
-      "name": "Niladri Kumar",
-      "count": 2
-    },
-    {
-      "name": "Pranit Gedham",
-      "count": 2
-    },
-    {
-      "name": "Prasad S",
-      "count": 2
-    },
-    {
-      "name": "Rana Mazumder",
-      "count": 2
-    },
-    {
-      "name": "Sachet–Parampara",
-      "count": 2
-    },
-    {
-      "name": "Salim-Sulaiman",
-      "count": 2
-    },
-    {
-      "name": "Samira Koppikar",
-      "count": 2
-    },
-    {
-      "name": "Shankar-Ehsaan-Loy",
-      "count": 2
-    },
-    {
-      "name": "Shivam Pathak",
-      "count": 2
-    },
-    {
-      "name": "Sohail Sen",
-      "count": 2
-    },
-    {
-      "name": "Tony Kakkar",
-      "count": 2
-    },
-    {
-      "name": "Vipin Patwa",
-      "count": 2
-    },
-    {
-      "name": "Yuvan Shankar Raja",
-      "count": 2
     },
     {
       "name": "Abhiruchi Chand",
@@ -11526,16 +11302,56 @@
       "count": 1
     },
     {
+      "name": "Amaal Mallik",
+      "count": 14
+    },
+    {
+      "name": "Amartya Bobo Rahut",
+      "count": 2
+    },
+    {
+      "name": "Amartya Rahut",
+      "count": 2
+    },
+    {
+      "name": "Amit Trivedi",
+      "count": 25
+    },
+    {
       "name": "Anique",
       "count": 1
+    },
+    {
+      "name": "Anirudh Ravichander",
+      "count": 2
+    },
+    {
+      "name": "Ankit Tiwari",
+      "count": 3
     },
     {
       "name": "Annkur R Pathakk",
       "count": 1
     },
     {
+      "name": "Anu Malik",
+      "count": 2
+    },
+    {
+      "name": "Anurag Saikia",
+      "count": 2
+    },
+    {
       "name": "Anurag Sharma",
       "count": 1
+    },
+    {
+      "name": "Arijit Singh",
+      "count": 6
+    },
+    {
+      "name": "Arjuna Harjai",
+      "count": 2
     },
     {
       "name": "Arjunna Harjaie",
@@ -11546,6 +11362,14 @@
       "count": 1
     },
     {
+      "name": "Arko Pravo Mukherjee",
+      "count": 2
+    },
+    {
+      "name": "Asad Khan",
+      "count": 2
+    },
+    {
       "name": "Bann Chakraborty",
       "count": 1
     },
@@ -11554,8 +11378,20 @@
       "count": 1
     },
     {
+      "name": "Bobby–Imran",
+      "count": 2
+    },
+    {
+      "name": "Chirantan Bhatt",
+      "count": 3
+    },
+    {
       "name": "Chirantan Bhatt (Original by Kalyanji–Anandji)",
       "count": 1
+    },
+    {
+      "name": "Clinton Cerejo",
+      "count": 2
     },
     {
       "name": "Clinton Cerejo and Bionca Gomes (Shor Police)",
@@ -11570,6 +11406,10 @@
       "count": 1
     },
     {
+      "name": "Gaurav Dagaonkar",
+      "count": 2
+    },
+    {
       "name": "Hanif Shaikh",
       "count": 1
     },
@@ -11580,6 +11420,10 @@
     {
       "name": "Harpreet Singh",
       "count": 1
+    },
+    {
+      "name": "Himesh Reshammiya",
+      "count": 9
     },
     {
       "name": "Hitesh Sonik",
@@ -11594,6 +11438,14 @@
       "count": 1
     },
     {
+      "name": "JAM8",
+      "count": 5
+    },
+    {
+      "name": "Jasleen Royal",
+      "count": 4
+    },
+    {
       "name": "Jatinder Shah",
       "count": 1
     },
@@ -11604,6 +11456,10 @@
     {
       "name": "Jawad Ahmad (Recreated by Sharib−Toshi)",
       "count": 1
+    },
+    {
+      "name": "Jeet Gannguli",
+      "count": 25
     },
     {
       "name": "Junoon (Recreated by Joy-Anjan)",
@@ -11618,6 +11474,10 @@
       "count": 1
     },
     {
+      "name": "Kashi-Richard",
+      "count": 2
+    },
+    {
       "name": "Khaalif",
       "count": 1
     },
@@ -11628,6 +11488,10 @@
     {
       "name": "Khayyam (Recreated by Anu Malik)",
       "count": 1
+    },
+    {
+      "name": "Laxmikant-Pyarelal (Recreated by Arko Pravo Mukherjee)",
+      "count": 2
     },
     {
       "name": "Laxmikant–Pyarelal (Remixed by Amit Trivedi)",
@@ -11654,28 +11518,68 @@
       "count": 1
     },
     {
+      "name": "Meet Bros",
+      "count": 5
+    },
+    {
       "name": "Mehmood Arafat and Rashid Khan",
       "count": 1
+    },
+    {
+      "name": "Mithoon",
+      "count": 30
     },
     {
       "name": "Mithoon (Remixed by DJ Shadow Dubai)",
       "count": 1
     },
     {
+      "name": "Niladri Kumar",
+      "count": 2
+    },
+    {
       "name": "OAFF",
       "count": 1
+    },
+    {
+      "name": "Palash Muchhal",
+      "count": 5
+    },
+    {
+      "name": "Pranit Gedham",
+      "count": 2
+    },
+    {
+      "name": "Prasad S",
+      "count": 2
     },
     {
       "name": "Prashant Vadhyar",
       "count": 1
     },
     {
+      "name": "Pritam",
+      "count": 47
+    },
+    {
       "name": "Pritam Chakarborty",
       "count": 1
     },
     {
+      "name": "Pritam Chakraborty",
+      "count": 62
+    },
+    {
       "name": "Rahul Bhatt",
       "count": 1
+    },
+    {
+      "name": "Ram Sampath",
+      "count": 6
+    },
+    {
+      "name": "Rana Mazumder",
+      "count": 2
     },
     {
       "name": "Rashid Khan",
@@ -11686,12 +11590,48 @@
       "count": 1
     },
     {
+      "name": "Rochak Kohli",
+      "count": 6
+    },
+    {
       "name": "Sachet – Parampara",
       "count": 1
     },
     {
+      "name": "Sachet–Parampara",
+      "count": 2
+    },
+    {
+      "name": "Sachin-Jigar",
+      "count": 3
+    },
+    {
+      "name": "Sachin–Jigar",
+      "count": 12
+    },
+    {
+      "name": "Sajid–Wajid",
+      "count": 5
+    },
+    {
+      "name": "Salim-Sulaiman",
+      "count": 2
+    },
+    {
+      "name": "Salim–Sulaiman",
+      "count": 7
+    },
+    {
+      "name": "Samira Koppikar",
+      "count": 2
+    },
+    {
       "name": "Samuel-Akanksha",
       "count": 1
+    },
+    {
+      "name": "Sanjay Leela Bhansali",
+      "count": 4
     },
     {
       "name": "Satya",
@@ -11710,12 +11650,48 @@
       "count": 1
     },
     {
+      "name": "Shankar-Ehsaan-Loy",
+      "count": 2
+    },
+    {
+      "name": "Shankar–Ehsaan–Loy",
+      "count": 14
+    },
+    {
+      "name": "Sharib–Toshi",
+      "count": 4
+    },
+    {
       "name": "Shashi-Shivamm",
       "count": 1
     },
     {
+      "name": "Shashwat Sachdev",
+      "count": 4
+    },
+    {
+      "name": "Shivam Pathak",
+      "count": 2
+    },
+    {
+      "name": "Shreyas Puranik",
+      "count": 3
+    },
+    {
+      "name": "Sohail Sen",
+      "count": 2
+    },
+    {
+      "name": "Somesh Saha",
+      "count": 3
+    },
+    {
       "name": "Sumeet Bellary",
       "count": 1
+    },
+    {
+      "name": "Tanishk Bagchi",
+      "count": 10
     },
     {
       "name": "Tanishk-Vayu",
@@ -11726,16 +11702,36 @@
       "count": 1
     },
     {
+      "name": "Tony Kakkar",
+      "count": 2
+    },
+    {
       "name": "Ved Sharma",
       "count": 1
+    },
+    {
+      "name": "Vipin Patwa",
+      "count": 2
     },
     {
       "name": "Vishal Bharadwaj",
       "count": 1
     },
     {
+      "name": "Vishal Bhardwaj",
+      "count": 14
+    },
+    {
+      "name": "Vishal Mishra",
+      "count": 4
+    },
+    {
       "name": "Vishal-Shekhar",
       "count": 1
+    },
+    {
+      "name": "Vishal–Shekhar",
+      "count": 8
     },
     {
       "name": "Vivek Kar",
@@ -11750,230 +11746,22 @@
       "count": 1
     },
     {
+      "name": "Yuvan Shankar Raja",
+      "count": 2
+    },
+    {
       "name": "Zulfiqar Jabbar Khan (recreated by Rochak Kohli)",
       "count": 1
     }
   ],
   "lyricists": [
     {
-      "name": "Amitabh Bhattacharya",
-      "count": 82
-    },
-    {
-      "name": "Irshad Kamil",
-      "count": 54
-    },
-    {
-      "name": "Kumaar",
-      "count": 37
-    },
-    {
-      "name": "Gulzar",
-      "count": 26
-    },
-    {
-      "name": "Kausar Munir",
-      "count": 20
-    },
-    {
-      "name": "Manoj Muntashir",
-      "count": 20
-    },
-    {
-      "name": "Mithoon",
-      "count": 15
-    },
-    {
-      "name": "Sayeed Quadri",
-      "count": 15
-    },
-    {
-      "name": "Rashmi Virag",
-      "count": 11
-    },
-    {
-      "name": "Priya Saraiya",
-      "count": 9
-    },
-    {
-      "name": "Kunaal Vermaa",
-      "count": 7
-    },
-    {
-      "name": "Neelesh Misra",
-      "count": 7
-    },
-    {
-      "name": "Manoj Yadav",
-      "count": 6
-    },
-    {
-      "name": "Rashmi Singh",
-      "count": 6
-    },
-    {
-      "name": "Sameer",
-      "count": 6
-    },
-    {
-      "name": "Swanand Kirkire",
-      "count": 6
-    },
-    {
       "name": "A. M. Turaz",
       "count": 5
     },
     {
-      "name": "Javed Akhtar",
-      "count": 5
-    },
-    {
-      "name": "Shabbir Ahmed",
-      "count": 5
-    },
-    {
-      "name": "Varun Grover",
-      "count": 5
-    },
-    {
-      "name": "Raj Shekhar",
-      "count": 4
-    },
-    {
       "name": "Aditya Sharma",
       "count": 3
-    },
-    {
-      "name": "Divya Unny",
-      "count": 3
-    },
-    {
-      "name": "IP Singh",
-      "count": 3
-    },
-    {
-      "name": "Prashant Ingole",
-      "count": 3
-    },
-    {
-      "name": "Sanamjit Talwar",
-      "count": 3
-    },
-    {
-      "name": "Sandeep Shrivastava",
-      "count": 3
-    },
-    {
-      "name": "Shakeel Azmi",
-      "count": 3
-    },
-    {
-      "name": "Shellee",
-      "count": 3
-    },
-    {
-      "name": "Siddharth–Garima",
-      "count": 3
-    },
-    {
-      "name": "Somesh Saha",
-      "count": 3
-    },
-    {
-      "name": "Anvita Dutt",
-      "count": 2
-    },
-    {
-      "name": "Arafat Mahmood",
-      "count": 2
-    },
-    {
-      "name": "Arko Pravo Mukherjee",
-      "count": 2
-    },
-    {
-      "name": "Ashish Pandit",
-      "count": 2
-    },
-    {
-      "name": "Aziz Qaisi",
-      "count": 2
-    },
-    {
-      "name": "Habib Faisal",
-      "count": 2
-    },
-    {
-      "name": "Irfan Siddiqui",
-      "count": 2
-    },
-    {
-      "name": "Jaideep Sahni",
-      "count": 2
-    },
-    {
-      "name": "Kunaal Verma",
-      "count": 2
-    },
-    {
-      "name": "Milind Dhaimade",
-      "count": 2
-    },
-    {
-      "name": "Palak Muchhal",
-      "count": 2
-    },
-    {
-      "name": "Panchhi",
-      "count": 2
-    },
-    {
-      "name": "Qaisar Ul Jafri",
-      "count": 2
-    },
-    {
-      "name": "Raqueeb Alam",
-      "count": 2
-    },
-    {
-      "name": "Sandeep Nath",
-      "count": 2
-    },
-    {
-      "name": "Sandeep Singh",
-      "count": 2
-    },
-    {
-      "name": "Sanjay Tripathy",
-      "count": 2
-    },
-    {
-      "name": "Shraddha Pandit",
-      "count": 2
-    },
-    {
-      "name": "Shweta Raaj",
-      "count": 2
-    },
-    {
-      "name": "Siddharth-Garima",
-      "count": 2
-    },
-    {
-      "name": "Tanishk Bagchi",
-      "count": 2
-    },
-    {
-      "name": "Tony Kakkar",
-      "count": 2
-    },
-    {
-      "name": "Turaz–Azeem Shirazi",
-      "count": 2
-    },
-    {
-      "name": "Vayu",
-      "count": 2
     },
     {
       "name": "Aditya Shri Hari",
@@ -11992,6 +11780,10 @@
       "count": 1
     },
     {
+      "name": "Amitabh Bhattacharya",
+      "count": 82
+    },
+    {
       "name": "Ankur Tewari",
       "count": 1
     },
@@ -12000,8 +11792,28 @@
       "count": 1
     },
     {
+      "name": "Anvita Dutt",
+      "count": 2
+    },
+    {
+      "name": "Arafat Mahmood",
+      "count": 2
+    },
+    {
+      "name": "Arko Pravo Mukherjee",
+      "count": 2
+    },
+    {
       "name": "Arshia Nahid",
       "count": 1
+    },
+    {
+      "name": "Ashish Pandit",
+      "count": 2
+    },
+    {
+      "name": "Aziz Qaisi",
+      "count": 2
     },
     {
       "name": "Bann Chakraborty",
@@ -12022,6 +11834,10 @@
     {
       "name": "Dinesh Vijan",
       "count": 1
+    },
+    {
+      "name": "Divya Unny",
+      "count": 3
     },
     {
       "name": "Dr Sagar",
@@ -12048,8 +11864,16 @@
       "count": 1
     },
     {
+      "name": "Gulzar",
+      "count": 26
+    },
+    {
       "name": "Gurpreet Saini",
       "count": 1
+    },
+    {
+      "name": "Habib Faisal",
+      "count": 2
     },
     {
       "name": "Hanif Shaikh",
@@ -12058,6 +11882,26 @@
     {
       "name": "Hiral Brahmbhatt",
       "count": 1
+    },
+    {
+      "name": "IP Singh",
+      "count": 3
+    },
+    {
+      "name": "Irfan Siddiqui",
+      "count": 2
+    },
+    {
+      "name": "Irshad Kamil",
+      "count": 54
+    },
+    {
+      "name": "Jaideep Sahni",
+      "count": 2
+    },
+    {
+      "name": "Javed Akhtar",
+      "count": 5
     },
     {
       "name": "Junaid Wasi",
@@ -12076,12 +11920,28 @@
       "count": 1
     },
     {
+      "name": "Kausar Munir",
+      "count": 20
+    },
+    {
       "name": "Khaalif",
       "count": 1
     },
     {
       "name": "Khamosh Shah",
       "count": 1
+    },
+    {
+      "name": "Kumaar",
+      "count": 37
+    },
+    {
+      "name": "Kunaal Verma",
+      "count": 2
+    },
+    {
+      "name": "Kunaal Vermaa",
+      "count": 7
     },
     {
       "name": "Manan Bhardwaj",
@@ -12104,8 +11964,24 @@
       "count": 1
     },
     {
+      "name": "Manoj Muntashir",
+      "count": 20
+    },
+    {
+      "name": "Manoj Yadav",
+      "count": 6
+    },
+    {
       "name": "Mayur Puri",
       "count": 1
+    },
+    {
+      "name": "Milind Dhaimade",
+      "count": 2
+    },
+    {
+      "name": "Mithoon",
+      "count": 15
     },
     {
       "name": "Mudassar Aziz",
@@ -12120,8 +11996,28 @@
       "count": 1
     },
     {
+      "name": "Neelesh Misra",
+      "count": 7
+    },
+    {
+      "name": "Palak Muchhal",
+      "count": 2
+    },
+    {
+      "name": "Panchhi",
+      "count": 2
+    },
+    {
+      "name": "Prashant Ingole",
+      "count": 3
+    },
+    {
       "name": "Prashant Pandey",
       "count": 1
+    },
+    {
+      "name": "Priya Saraiya",
+      "count": 9
     },
     {
       "name": "Priyanka R Bala",
@@ -12136,6 +12032,10 @@
       "count": 1
     },
     {
+      "name": "Qaisar Ul Jafri",
+      "count": 2
+    },
+    {
       "name": "Raftaar",
       "count": 1
     },
@@ -12148,6 +12048,10 @@
       "count": 1
     },
     {
+      "name": "Raj Shekhar",
+      "count": 4
+    },
+    {
       "name": "Rajendra Prasad",
       "count": 1
     },
@@ -12156,8 +12060,20 @@
       "count": 1
     },
     {
+      "name": "Raqueeb Alam",
+      "count": 2
+    },
+    {
       "name": "Rashid Khan",
       "count": 1
+    },
+    {
+      "name": "Rashmi Singh",
+      "count": 6
+    },
+    {
+      "name": "Rashmi Virag",
+      "count": 11
     },
     {
       "name": "Rayyan Ameen",
@@ -12184,6 +12100,10 @@
       "count": 1
     },
     {
+      "name": "Sameer",
+      "count": 6
+    },
+    {
       "name": "Sameer Anjaan",
       "count": 1
     },
@@ -12196,16 +12116,60 @@
       "count": 1
     },
     {
+      "name": "Sanamjit Talwar",
+      "count": 3
+    },
+    {
+      "name": "Sandeep Nath",
+      "count": 2
+    },
+    {
+      "name": "Sandeep Shrivastava",
+      "count": 3
+    },
+    {
       "name": "Sandeep Shrivastva",
       "count": 1
+    },
+    {
+      "name": "Sandeep Singh",
+      "count": 2
+    },
+    {
+      "name": "Sanjay Tripathy",
+      "count": 2
     },
     {
       "name": "Satya Khare",
       "count": 1
     },
     {
+      "name": "Sayeed Quadri",
+      "count": 15
+    },
+    {
+      "name": "Shabbir Ahmed",
+      "count": 5
+    },
+    {
+      "name": "Shakeel Azmi",
+      "count": 3
+    },
+    {
+      "name": "Shellee",
+      "count": 3
+    },
+    {
       "name": "Shloke Lal",
       "count": 1
+    },
+    {
+      "name": "Shraddha Pandit",
+      "count": 2
+    },
+    {
+      "name": "Shweta Raaj",
+      "count": 2
     },
     {
       "name": "Siddhant Kaushal",
@@ -12224,8 +12188,20 @@
       "count": 1
     },
     {
+      "name": "Siddharth-Garima",
+      "count": 2
+    },
+    {
+      "name": "Siddharth–Garima",
+      "count": 3
+    },
+    {
       "name": "Sidhant Mago",
       "count": 1
+    },
+    {
+      "name": "Somesh Saha",
+      "count": 3
     },
     {
       "name": "Sonia Kapoor Reshammiya",
@@ -12244,6 +12220,30 @@
       "count": 1
     },
     {
+      "name": "Swanand Kirkire",
+      "count": 6
+    },
+    {
+      "name": "Tanishk Bagchi",
+      "count": 2
+    },
+    {
+      "name": "Tony Kakkar",
+      "count": 2
+    },
+    {
+      "name": "Turaz–Azeem Shirazi",
+      "count": 2
+    },
+    {
+      "name": "Varun Grover",
+      "count": 5
+    },
+    {
+      "name": "Vayu",
+      "count": 2
+    },
+    {
       "name": "Verma Malik",
       "count": 1
     },
@@ -12254,164 +12254,16 @@
   ],
   "vocalists": [
     {
-      "name": "Shreya Ghoshal",
-      "count": 25
-    },
-    {
-      "name": "Jonita Gandhi",
-      "count": 11
-    },
-    {
-      "name": "Nikhita Gandhi",
-      "count": 10
-    },
-    {
-      "name": "Neeti Mohan",
-      "count": 9
-    },
-    {
-      "name": "Shilpa Rao",
-      "count": 9
-    },
-    {
-      "name": "Antara Mitra",
-      "count": 8
-    },
-    {
-      "name": "Palak Muchhal",
-      "count": 8
-    },
-    {
-      "name": "Sunidhi Chauhan",
-      "count": 8
-    },
-    {
-      "name": "Tulsi Kumar",
-      "count": 8
-    },
-    {
-      "name": "Yashita Sharma",
-      "count": 6
-    },
-    {
-      "name": "Altamash Faridi",
-      "count": 5
-    },
-    {
-      "name": "Aditi Singh Sharma",
-      "count": 4
-    },
-    {
-      "name": "Asees Kaur",
-      "count": 4
-    },
-    {
-      "name": "Chinmayi Sripada",
-      "count": 4
-    },
-    {
-      "name": "Nakash Aziz",
-      "count": 4
-    },
-    {
-      "name": "Neha Kakkar",
-      "count": 4
-    },
-    {
-      "name": "Samira Koppikar",
-      "count": 4
-    },
-    {
-      "name": "Shadab Faridi",
-      "count": 4
-    },
-    {
-      "name": "Shashwat Singh",
-      "count": 4
-    },
-    {
-      "name": "Amit Mishra",
-      "count": 3
-    },
-    {
-      "name": "Amrita Singh",
-      "count": 3
-    },
-    {
-      "name": "Mithoon",
-      "count": 3
-    },
-    {
-      "name": "Priya Saraiya",
-      "count": 3
-    },
-    {
-      "name": "Shalmali Kholgade",
-      "count": 3
-    },
-    {
-      "name": "Shashaa Tirupati",
-      "count": 3
-    },
-    {
-      "name": "Vishal Mishra",
-      "count": 3
-    },
-    {
-      "name": "Aakanksha Sharma",
-      "count": 2
-    },
-    {
-      "name": "Amit Trivedi",
-      "count": 2
-    },
-    {
-      "name": "Armaan Malik",
-      "count": 2
-    },
-    {
-      "name": "Ash King",
-      "count": 2
-    },
-    {
-      "name": "Badshah",
-      "count": 2
-    },
-    {
-      "name": "Harshdeep Kaur",
-      "count": 2
-    },
-    {
-      "name": "Jasleen Royal",
-      "count": 2
-    },
-    {
-      "name": "Madhubanti Bagchi",
-      "count": 2
-    },
-    {
-      "name": "Meet Bros",
-      "count": 2
-    },
-    {
-      "name": "Meghna Mishra",
-      "count": 2
-    },
-    {
-      "name": "Raja Kumari",
-      "count": 2
-    },
-    {
-      "name": "Sachin–Jigar",
-      "count": 2
-    },
-    {
-      "name": "Sashwat Singh",
-      "count": 2
+      "name": "[189]",
+      "count": 1
     },
     {
       "name": "A. R. Rahman",
       "count": 1
+    },
+    {
+      "name": "Aakanksha Sharma",
+      "count": 2
     },
     {
       "name": "Aakanshka Sharma",
@@ -12420,6 +12272,10 @@
     {
       "name": "Achint Thakkar",
       "count": 1
+    },
+    {
+      "name": "Aditi Singh Sharma",
+      "count": 4
     },
     {
       "name": "Afsana Khan",
@@ -12438,6 +12294,10 @@
       "count": 1
     },
     {
+      "name": "Altamash Faridi",
+      "count": 5
+    },
+    {
       "name": "Alyssa Mendonsa",
       "count": 1
     },
@@ -12450,8 +12310,24 @@
       "count": 1
     },
     {
+      "name": "Amit Mishra",
+      "count": 3
+    },
+    {
+      "name": "Amit Trivedi",
+      "count": 2
+    },
+    {
       "name": "Amnah Noor",
       "count": 1
+    },
+    {
+      "name": "Amrita Singh",
+      "count": 3
+    },
+    {
+      "name": "Antara Mitra",
+      "count": 8
     },
     {
       "name": "Anumita Nadesan",
@@ -12466,12 +12342,28 @@
       "count": 1
     },
     {
+      "name": "Armaan Malik",
+      "count": 2
+    },
+    {
+      "name": "Asees Kaur",
+      "count": 4
+    },
+    {
+      "name": "Ash King",
+      "count": 2
+    },
+    {
       "name": "Asha Bhosle",
       "count": 1
     },
     {
       "name": "Atif Aslam",
       "count": 1
+    },
+    {
+      "name": "Badshah",
+      "count": 2
     },
     {
       "name": "Bela Shende",
@@ -12494,6 +12386,10 @@
       "count": 1
     },
     {
+      "name": "Chinmayi Sripada",
+      "count": 4
+    },
+    {
       "name": "Dev Negi",
       "count": 1
     },
@@ -12506,11 +12402,11 @@
       "count": 1
     },
     {
-      "name": "EPR Iyer",
+      "name": "Eklavya",
       "count": 1
     },
     {
-      "name": "Eklavya",
+      "name": "EPR Iyer",
       "count": 1
     },
     {
@@ -12530,12 +12426,24 @@
       "count": 1
     },
     {
+      "name": "Harshdeep Kaur",
+      "count": 2
+    },
+    {
       "name": "Himani Kapoor",
       "count": 1
     },
     {
       "name": "Ishita Vishwakarma",
       "count": 1
+    },
+    {
+      "name": "Jasleen Royal",
+      "count": 2
+    },
+    {
+      "name": "Jonita Gandhi",
+      "count": 11
     },
     {
       "name": "Jubin Nautiyal",
@@ -12547,10 +12455,6 @@
     },
     {
       "name": "Jyotica Tangri",
-      "count": 1
-    },
-    {
-      "name": "KK",
       "count": 1
     },
     {
@@ -12566,12 +12470,32 @@
       "count": 1
     },
     {
+      "name": "KK",
+      "count": 1
+    },
+    {
+      "name": "Madhubanti Bagchi",
+      "count": 2
+    },
+    {
       "name": "Manj Musik",
       "count": 1
     },
     {
       "name": "Master Mani Dharamkot",
       "count": 1
+    },
+    {
+      "name": "Meet Bros",
+      "count": 2
+    },
+    {
+      "name": "Meghna Mishra",
+      "count": 2
+    },
+    {
+      "name": "Mithoon",
+      "count": 3
     },
     {
       "name": "Mohan Kanan",
@@ -12594,8 +12518,20 @@
       "count": 1
     },
     {
+      "name": "Nakash Aziz",
+      "count": 4
+    },
+    {
       "name": "Nandini Srikar",
       "count": 1
+    },
+    {
+      "name": "Neeti Mohan",
+      "count": 9
+    },
+    {
+      "name": "Neha Kakkar",
+      "count": 4
     },
     {
       "name": "Neha Karode",
@@ -12612,6 +12548,14 @@
     {
       "name": "Nikhil D'Souza",
       "count": 1
+    },
+    {
+      "name": "Nikhita Gandhi",
+      "count": 10
+    },
+    {
+      "name": "Palak Muchhal",
+      "count": 8
     },
     {
       "name": "Parampara Thakur",
@@ -12642,6 +12586,10 @@
       "count": 1
     },
     {
+      "name": "Priya Saraiya",
+      "count": 3
+    },
+    {
       "name": "Puneet Sharma",
       "count": 1
     },
@@ -12652,6 +12600,10 @@
     {
       "name": "Raj Pandit",
       "count": 1
+    },
+    {
+      "name": "Raja Kumari",
+      "count": 2
     },
     {
       "name": "Ranbir Kapoor",
@@ -12686,6 +12638,10 @@
       "count": 1
     },
     {
+      "name": "Sachin–Jigar",
+      "count": 2
+    },
+    {
       "name": "Sahil Rayyan",
       "count": 1
     },
@@ -12702,12 +12658,36 @@
       "count": 1
     },
     {
+      "name": "Samira Koppikar",
+      "count": 4
+    },
+    {
       "name": "Sanah Moidutty",
       "count": 1
     },
     {
+      "name": "Sashwat Singh",
+      "count": 2
+    },
+    {
+      "name": "Shadab Faridi",
+      "count": 4
+    },
+    {
+      "name": "Shalmali Kholgade",
+      "count": 3
+    },
+    {
       "name": "Shariva Parulkar",
       "count": 1
+    },
+    {
+      "name": "Shashaa Tirupati",
+      "count": 3
+    },
+    {
+      "name": "Shashwat Singh",
+      "count": 4
     },
     {
       "name": "Shefali Alvares",
@@ -12716,6 +12696,14 @@
     {
       "name": "Shiba Bhardwaj",
       "count": 1
+    },
+    {
+      "name": "Shilpa Rao",
+      "count": 9
+    },
+    {
+      "name": "Shreya Ghoshal",
+      "count": 25
     },
     {
       "name": "Siddharth Mahadevan",
@@ -12754,6 +12742,10 @@
       "count": 1
     },
     {
+      "name": "Sunidhi Chauhan",
+      "count": 8
+    },
+    {
       "name": "Suzanne D'Mello",
       "count": 1
     },
@@ -12774,6 +12766,10 @@
       "count": 1
     },
     {
+      "name": "Tulsi Kumar",
+      "count": 8
+    },
+    {
       "name": "Vibha Saraf",
       "count": 1
     },
@@ -12782,330 +12778,66 @@
       "count": 1
     },
     {
+      "name": "Vishal Mishra",
+      "count": 3
+    },
+    {
       "name": "Vishal–Shekhar",
       "count": 1
     },
     {
-      "name": "Yasser Desai",
-      "count": 1
+      "name": "Yashita Sharma",
+      "count": 6
     },
     {
-      "name": "[189]",
+      "name": "Yasser Desai",
       "count": 1
     }
   ],
   "actors": [
     {
-      "name": "Ranbir Kapoor",
-      "count": 33
-    },
-    {
-      "name": "Akshay Kumar",
-      "count": 20
-    },
-    {
-      "name": "Kartik Aaryan",
-      "count": 20
-    },
-    {
-      "name": "Shah Rukh Khan",
-      "count": 20
-    },
-    {
-      "name": "Ranveer Singh",
-      "count": 17
-    },
-    {
-      "name": "Shahid Kapoor",
-      "count": 17
-    },
-    {
-      "name": "Varun Dhawan",
-      "count": 17
-    },
-    {
-      "name": "Aditya Roy Kapur",
-      "count": 14
-    },
-    {
-      "name": "Rajkummar Rao",
-      "count": 13
-    },
-    {
-      "name": "Sushant Singh Rajput",
-      "count": 13
-    },
-    {
-      "name": "Emraan Hashmi",
-      "count": 11
-    },
-    {
-      "name": "Saif Ali Khan",
-      "count": 11
-    },
-    {
-      "name": "Ajay Devgn",
-      "count": 9
-    },
-    {
-      "name": "Aamir Khan",
-      "count": 7
-    },
-    {
-      "name": "Ali Fazal",
-      "count": 7
-    },
-    {
       "name": "Aadar Jain",
       "count": 6
-    },
-    {
-      "name": "Jay Bhanushali",
-      "count": 6
-    },
-    {
-      "name": "Sidharth Malhotra",
-      "count": 6
-    },
-    {
-      "name": "Abhishek Bachchan",
-      "count": 5
-    },
-    {
-      "name": "Ayushmann Khurrana",
-      "count": 5
-    },
-    {
-      "name": "Junaid Khan",
-      "count": 5
-    },
-    {
-      "name": "Arjun Kapoor",
-      "count": 4
-    },
-    {
-      "name": "Farhan Akhtar",
-      "count": 4
-    },
-    {
-      "name": "Himansh Kohli",
-      "count": 4
-    },
-    {
-      "name": "Hrithik Roshan",
-      "count": 4
-    },
-    {
-      "name": "Pankaj Tripathi",
-      "count": 4
-    },
-    {
-      "name": "Rajeev Khandelwal",
-      "count": 4
-    },
-    {
-      "name": "Salman Khan",
-      "count": 4
-    },
-    {
-      "name": "Sharman Joshi",
-      "count": 4
-    },
-    {
-      "name": "Sunny Deol",
-      "count": 4
-    },
-    {
-      "name": "Tiger Shroff",
-      "count": 4
-    },
-    {
-      "name": "Vicky Kaushal",
-      "count": 4
-    },
-    {
-      "name": "Abhay Deol",
-      "count": 3
-    },
-    {
-      "name": "Dhanush",
-      "count": 3
-    },
-    {
-      "name": "Dulquer Salmaan",
-      "count": 3
-    },
-    {
-      "name": "Fawad Khan",
-      "count": 3
-    },
-    {
-      "name": "Harman Baweja",
-      "count": 3
-    },
-    {
-      "name": "Harshvardhan Rane",
-      "count": 3
-    },
-    {
-      "name": "John Abraham",
-      "count": 3
-    },
-    {
-      "name": "Prabhas",
-      "count": 3
-    },
-    {
-      "name": "Vikram",
-      "count": 3
-    },
-    {
-      "name": "Vikrant Massey",
-      "count": 3
-    },
-    {
-      "name": "Aaman Devgan",
-      "count": 2
-    },
-    {
-      "name": "Aashim Gulati",
-      "count": 2
-    },
-    {
-      "name": "Adhyayan Suman",
-      "count": 2
-    },
-    {
-      "name": "Agastya Nanda",
-      "count": 2
-    },
-    {
-      "name": "Barun Sobti",
-      "count": 2
-    },
-    {
-      "name": "Diganth",
-      "count": 2
-    },
-    {
-      "name": "Ehan Bhat",
-      "count": 2
-    },
-    {
-      "name": "Farooq Sheikh",
-      "count": 2
-    },
-    {
-      "name": "Gautam Rode",
-      "count": 2
-    },
-    {
-      "name": "Himesh Reshammiya",
-      "count": 2
-    },
-    {
-      "name": "Imran Abbas",
-      "count": 2
-    },
-    {
-      "name": "Jackky Bhagnani",
-      "count": 2
-    },
-    {
-      "name": "Jayam Ravi",
-      "count": 2
-    },
-    {
-      "name": "Karanvir Sharma",
-      "count": 2
-    },
-    {
-      "name": "Karthi",
-      "count": 2
-    },
-    {
-      "name": "Mausam Sharma",
-      "count": 2
-    },
-    {
-      "name": "Nishant Dahiya",
-      "count": 2
-    },
-    {
-      "name": "Pratik Gandhi",
-      "count": 2
-    },
-    {
-      "name": "Pulkit Samrat",
-      "count": 2
-    },
-    {
-      "name": "Randeep Hooda",
-      "count": 2
-    },
-    {
-      "name": "Sachiin Joshi",
-      "count": 2
-    },
-    {
-      "name": "Sanjay Dutt",
-      "count": 2
-    },
-    {
-      "name": "Saqib Saleem",
-      "count": 2
-    },
-    {
-      "name": "Shiv Darshan",
-      "count": 2
-    },
-    {
-      "name": "Shubham Kumar",
-      "count": 2
-    },
-    {
-      "name": "Siddhant Chaturvedi",
-      "count": 2
-    },
-    {
-      "name": "Sunny Singh",
-      "count": 2
-    },
-    {
-      "name": "Varun Mitra",
-      "count": 2
-    },
-    {
-      "name": "Vidyut Jammwal",
-      "count": 2
-    },
-    {
-      "name": "Vijay Sethupathi",
-      "count": 2
-    },
-    {
-      "name": "Vijay Varma",
-      "count": 2
-    },
-    {
-      "name": "Vishal Jethwa",
-      "count": 2
-    },
-    {
-      "name": "Yash Dasgupta",
-      "count": 2
     },
     {
       "name": "Aaishvary Thackeray",
       "count": 1
     },
     {
+      "name": "Aaman Devgan",
+      "count": 2
+    },
+    {
+      "name": "Aamir Khan",
+      "count": 7
+    },
+    {
+      "name": "Aashim Gulati",
+      "count": 2
+    },
+    {
+      "name": "Abhay Deol",
+      "count": 3
+    },
+    {
       "name": "Abhay Verma",
       "count": 1
     },
     {
+      "name": "Abhishek Bachchan",
+      "count": 5
+    },
+    {
       "name": "Adarsh Gourav",
       "count": 1
+    },
+    {
+      "name": "Adhyayan Suman",
+      "count": 2
+    },
+    {
+      "name": "Aditya Roy Kapur",
+      "count": 14
     },
     {
       "name": "Aditya Seal",
@@ -13116,12 +12848,28 @@
       "count": 1
     },
     {
+      "name": "Agastya Nanda",
+      "count": 2
+    },
+    {
       "name": "Ahaan Panday",
       "count": 1
     },
     {
       "name": "Ahan Shetty",
       "count": 1
+    },
+    {
+      "name": "Ajay Devgn",
+      "count": 9
+    },
+    {
+      "name": "Akshay Kumar",
+      "count": 20
+    },
+    {
+      "name": "Ali Fazal",
+      "count": 7
     },
     {
       "name": "Ali Zafar",
@@ -13144,6 +12892,10 @@
       "count": 1
     },
     {
+      "name": "Arjun Kapoor",
+      "count": 4
+    },
+    {
       "name": "Arshad Warsi",
       "count": 1
     },
@@ -13156,8 +12908,24 @@
       "count": 1
     },
     {
+      "name": "Ayushmann Khurrana",
+      "count": 5
+    },
+    {
+      "name": "Barun Sobti",
+      "count": 2
+    },
+    {
       "name": "Bhupendra Jadawat",
       "count": 1
+    },
+    {
+      "name": "Dhanush",
+      "count": 3
+    },
+    {
+      "name": "Diganth",
+      "count": 2
     },
     {
       "name": "Diljit Dosanjh",
@@ -13168,12 +12936,64 @@
       "count": 1
     },
     {
+      "name": "Dulquer Salmaan",
+      "count": 3
+    },
+    {
+      "name": "Ehan Bhat",
+      "count": 2
+    },
+    {
+      "name": "Emraan Hashmi",
+      "count": 11
+    },
+    {
+      "name": "Farhan Akhtar",
+      "count": 4
+    },
+    {
+      "name": "Farooq Sheikh",
+      "count": 2
+    },
+    {
+      "name": "Fawad Khan",
+      "count": 3
+    },
+    {
       "name": "Gashmeer Mahajani",
       "count": 1
     },
     {
+      "name": "Gautam Rode",
+      "count": 2
+    },
+    {
       "name": "Gulshan Devaiah",
       "count": 1
+    },
+    {
+      "name": "Harman Baweja",
+      "count": 3
+    },
+    {
+      "name": "Harshvardhan Rane",
+      "count": 3
+    },
+    {
+      "name": "Himansh Kohli",
+      "count": 4
+    },
+    {
+      "name": "Himesh Reshammiya",
+      "count": 2
+    },
+    {
+      "name": "Hrithik Roshan",
+      "count": 4
+    },
+    {
+      "name": "Imran Abbas",
+      "count": 2
     },
     {
       "name": "Irrfan Khan",
@@ -13184,12 +13004,32 @@
       "count": 1
     },
     {
+      "name": "Jackky Bhagnani",
+      "count": 2
+    },
+    {
       "name": "Jaideep Ahlawat",
       "count": 1
     },
     {
+      "name": "Jay Bhanushali",
+      "count": 6
+    },
+    {
+      "name": "Jayam Ravi",
+      "count": 2
+    },
+    {
       "name": "Jimmy Sheirgill",
       "count": 1
+    },
+    {
+      "name": "John Abraham",
+      "count": 3
+    },
+    {
+      "name": "Junaid Khan",
+      "count": 5
     },
     {
       "name": "Karan Deol",
@@ -13202,6 +13042,18 @@
     {
       "name": "Karan Kundra",
       "count": 1
+    },
+    {
+      "name": "Karanvir Sharma",
+      "count": 2
+    },
+    {
+      "name": "Karthi",
+      "count": 2
+    },
+    {
+      "name": "Kartik Aaryan",
+      "count": 20
     },
     {
       "name": "Kunal Kohli",
@@ -13220,6 +13072,10 @@
       "count": 1
     },
     {
+      "name": "Mausam Sharma",
+      "count": 2
+    },
+    {
       "name": "Mohammad Reza Golzar",
       "count": 1
     },
@@ -13236,44 +13092,132 @@
       "count": 1
     },
     {
+      "name": "Nishant Dahiya",
+      "count": 2
+    },
+    {
       "name": "Om Kanojiya",
       "count": 1
+    },
+    {
+      "name": "Pankaj Tripathi",
+      "count": 4
+    },
+    {
+      "name": "Prabhas",
+      "count": 3
     },
     {
       "name": "Prabhu Deva",
       "count": 1
     },
     {
+      "name": "Pratik Gandhi",
+      "count": 2
+    },
+    {
+      "name": "Pulkit Samrat",
+      "count": 2
+    },
+    {
       "name": "R. Madhavan",
       "count": 1
+    },
+    {
+      "name": "Rajeev Khandelwal",
+      "count": 4
     },
     {
       "name": "Rajinikanth",
       "count": 1
     },
     {
+      "name": "Rajkummar Rao",
+      "count": 13
+    },
+    {
       "name": "Rajneesh Duggal",
       "count": 1
+    },
+    {
+      "name": "Ranbir Kapoor",
+      "count": 33
+    },
+    {
+      "name": "Randeep Hooda",
+      "count": 2
+    },
+    {
+      "name": "Ranveer Singh",
+      "count": 17
     },
     {
       "name": "Rishi Kapoor",
       "count": 1
     },
     {
+      "name": "Sachiin Joshi",
+      "count": 2
+    },
+    {
+      "name": "Saif Ali Khan",
+      "count": 11
+    },
+    {
       "name": "Salim Diwan",
       "count": 1
+    },
+    {
+      "name": "Salman Khan",
+      "count": 4
+    },
+    {
+      "name": "Sanjay Dutt",
+      "count": 2
+    },
+    {
+      "name": "Saqib Saleem",
+      "count": 2
+    },
+    {
+      "name": "Shah Rukh Khan",
+      "count": 20
+    },
+    {
+      "name": "Shahid Kapoor",
+      "count": 17
     },
     {
       "name": "Sharib Hashmi",
       "count": 1
     },
     {
+      "name": "Sharman Joshi",
+      "count": 4
+    },
+    {
+      "name": "Shiv Darshan",
+      "count": 2
+    },
+    {
       "name": "Shiv Panditt",
       "count": 1
     },
     {
+      "name": "Shubham Kumar",
+      "count": 2
+    },
+    {
+      "name": "Siddhant Chaturvedi",
+      "count": 2
+    },
+    {
       "name": "Siddharth Malhotra",
       "count": 1
+    },
+    {
+      "name": "Sidharth Malhotra",
+      "count": 6
     },
     {
       "name": "Sikander Kher",
@@ -13292,6 +13236,18 @@
       "count": 1
     },
     {
+      "name": "Sunny Deol",
+      "count": 4
+    },
+    {
+      "name": "Sunny Singh",
+      "count": 2
+    },
+    {
+      "name": "Sushant Singh Rajput",
+      "count": 13
+    },
+    {
       "name": "Tanmay Ssingh",
       "count": 1
     },
@@ -13300,12 +13256,56 @@
       "count": 1
     },
     {
+      "name": "Tiger Shroff",
+      "count": 4
+    },
+    {
       "name": "Utkarsh Sharma",
       "count": 1
     },
     {
+      "name": "Varun Dhawan",
+      "count": 17
+    },
+    {
+      "name": "Varun Mitra",
+      "count": 2
+    },
+    {
       "name": "Vedang Raina",
       "count": 1
+    },
+    {
+      "name": "Vicky Kaushal",
+      "count": 4
+    },
+    {
+      "name": "Vidyut Jammwal",
+      "count": 2
+    },
+    {
+      "name": "Vijay Sethupathi",
+      "count": 2
+    },
+    {
+      "name": "Vijay Varma",
+      "count": 2
+    },
+    {
+      "name": "Vikram",
+      "count": 3
+    },
+    {
+      "name": "Vikrant Massey",
+      "count": 3
+    },
+    {
+      "name": "Vishal Jethwa",
+      "count": 2
+    },
+    {
+      "name": "Yash Dasgupta",
+      "count": 2
     },
     {
       "name": "Yash Soni",

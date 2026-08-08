@@ -50,12 +50,12 @@ for s in songs:
 def role_list(model):
     rows = session.query(model).all()
     out = [{"name": r.name, "count": len(r.songs)} for r in rows]
-    return sorted(out, key=lambda r: (-r["count"], r["name"]))
+    return sorted(out, key=lambda r: r["name"].lower())
 
 def vocalist_list():
     rows = session.query(Vocalist).all()
     out = [{"name": r.name, "count": len(r.song_links)} for r in rows if r.name != "Arijit Singh"]
-    return sorted(out, key=lambda r: (-r["count"], r["name"]))
+    return sorted(out, key=lambda r: r["name"].lower())
 
 data = {
     "songs": song_data,
