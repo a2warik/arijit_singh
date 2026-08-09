@@ -49,7 +49,7 @@ add_song(
 session.close()
 ```
 
-Loop this over a list of tuples to add many songs at once — it's exactly what `seed_data.py` does with the original 70.
+Loop this over a list of tuples to add many songs at once.
 
 ## After adding songs — update the website
 

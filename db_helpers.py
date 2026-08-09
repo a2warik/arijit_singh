@@ -6,8 +6,8 @@ tables free of duplicates. Before inserting "Pritam" as a Composer, we
 first check whether a Composer named "Pritam" already exists; if so we
 reuse that row (and its id) instead of creating a second one.
 
-Every insert path in this project (seed_data.py AND add_song.py) goes
-through these functions, which is what guarantees "no repeats."
+add_song.py goes through these functions for every insert, which is
+what guarantees "no repeats."
 """
 
 from models import Film, Composer, Lyricist, Vocalist, Actor

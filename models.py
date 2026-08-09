@@ -186,17 +186,8 @@ def get_engine():
 
 def get_session():
     """
-    Opens a session against the existing database.
-
-    This deliberately does NOT call Base.metadata.create_all() anymore.
-    Schema creation and every schema change now goes through Alembic
-    (`alembic upgrade head`), so this file stays the single source of
-    truth for what the tables look like, and Alembic's version history
-    stays accurate. If the tables don't exist yet, run:
-
-        alembic upgrade head
-
-    before using get_session() for the first time.
+    Opens a session against arijit_songs.db, whose schema already matches
+    the models defined in this file.
     """
     engine = get_engine()
     return sessionmaker(bind=engine)()
