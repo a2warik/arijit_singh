@@ -273,8 +273,9 @@
   @keyframes tide-scroll-l{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
   @keyframes tide-scroll-r{ from{ transform:translateX(-50%); } to{ transform:translateX(0); } }
 
-  /* shoreline: a thin surf-line sitting exactly where the sand ends and */
-  /* the ocean begins -- beach above it, water below, in that order.    */
+  /* shoreline: a thin surf-line sitting exactly where the dry sand ends */
+  /* and the submerged search bar begins -- his feet above it, the tide */
+  /* below it.                                                          */
   .tide-shore{ position:relative; height:24px; }
 
   /* tide channel: full-width water immersing the search bar and role   */
@@ -792,6 +793,23 @@
   </div>
 </section>
 
+<div class="tide tide-shore" aria-hidden="true">
+  <div class="tide-surge">
+    <div class="tide-scroll back">
+      <svg viewBox="0 0 400 100" preserveAspectRatio="none">
+        <path d="M0,50 C25,35 75,35 100,50 C125,65 175,65 200,50 C225,35 275,35 300,50 C325,65 375,65 400,50 L400,100 L0,100 Z"/>
+      </svg>
+    </div>
+  </div>
+  <div class="tide-surge lag">
+    <div class="tide-scroll front">
+      <svg viewBox="0 0 400 100" preserveAspectRatio="none">
+        <path d="M0,38 C25,23 75,23 100,38 C125,53 175,53 200,38 C225,23 275,23 300,38 C325,53 375,53 400,38 L400,52 C375,67 325,67 300,52 C275,37 225,37 200,52 C175,67 125,67 100,52 C75,37 25,37 0,52 Z"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
 <div class="controls" id="archive">
   <div class="tide-channel" aria-hidden="true"></div>
   <div class="controls-inner">
@@ -818,23 +836,6 @@
   <div class="tide-channel" aria-hidden="true"></div>
   <div class="browse-hint">Click a name to see every song they made with Arijit Singh.</div>
   <div class="cloud" id="cloud"></div>
-</div>
-
-<div class="tide tide-shore" aria-hidden="true">
-  <div class="tide-surge">
-    <div class="tide-scroll back">
-      <svg viewBox="0 0 400 100" preserveAspectRatio="none">
-        <path d="M0,50 C25,35 75,35 100,50 C125,65 175,65 200,50 C225,35 275,35 300,50 C325,65 375,65 400,50 L400,100 L0,100 Z"/>
-      </svg>
-    </div>
-  </div>
-  <div class="tide-surge lag">
-    <div class="tide-scroll front">
-      <svg viewBox="0 0 400 100" preserveAspectRatio="none">
-        <path d="M0,38 C25,23 75,23 100,38 C125,53 175,53 200,38 C225,23 275,23 300,38 C325,53 375,53 400,38 L400,52 C375,67 325,67 300,52 C275,37 225,37 200,52 C175,67 125,67 100,52 C75,37 25,37 0,52 Z"/>
-      </svg>
-    </div>
-  </div>
 </div>
 
 <div class="person-pill" id="personPill">
