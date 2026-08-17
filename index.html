@@ -158,7 +158,16 @@
     background:radial-gradient(circle at 34% 30%,
       #f6f2e4 0%, #eddcae 38%, #d9b978 66%, rgba(217,185,120,0.1) 80%, transparent 84%);
     box-shadow:0 0 46px 12px rgba(233,199,133,0.22);
+    /* it's a <button> so the whole sky's pointer-events:none can be   */
+    /* overridden right here -- clicking the moon downloads a playlist */
+    padding:0; border:none; appearance:none; pointer-events:auto; cursor:pointer;
+    transition:box-shadow .25s, transform .25s;
   }
+  .moon:hover, .moon:focus-visible{
+    box-shadow:0 0 58px 16px rgba(233,199,133,0.36);
+    transform:scale(1.06);
+  }
+  .moon:focus-visible{ outline:2px solid rgba(234,246,246,0.6); outline-offset:4px; }
   .moon::before, .moon::after{
     content:""; position:absolute; border-radius:50%;
     background:rgba(180,150,95,0.28);
@@ -414,17 +423,6 @@
     padding:0 4px;
   }
   .count-tag b{color:#3d2b14; font-weight:700;}
-
-  .export-btn{
-    display:inline-flex; align-items:center; gap:7px;
-    font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
-    letter-spacing:0.04em; white-space:nowrap;
-    padding:11px 16px; border-radius:10px;
-    border:1px solid rgba(61,43,20,0.3); background:rgba(255,248,232,0.55);
-    color:#3d2b14; cursor:pointer; transition:border-color .2s, background .2s;
-  }
-  .export-btn:hover{ border-color:#5c4322; background:rgba(255,248,232,0.85); }
-  .export-btn svg{ width:14px; height:14px; stroke:#5c4322; flex-shrink:0; }
 
   /* ---------- role tabs (still on the sand) ---------- */
   .role-tabs{
@@ -685,7 +683,7 @@
     <svg class="sky-gull g3" viewBox="0 0 24 12"><path d="M2 8 q4 -7 8 0 q4 -7 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
     <svg class="sky-gull g4" viewBox="0 0 24 12"><path d="M2 8 q4 -7 8 0 q4 -7 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
 
-    <div class="moon"></div>
+    <button class="moon" id="moonExport" type="button" title="Download the songs currently showing as a CSV playlist" aria-label="Download the songs currently showing as a CSV playlist"></button>
     <div class="star big" style="top:5%; left:18%; animation-delay:0.2s;"></div>
     <div class="star" style="top:9%; left:32%; animation-delay:1.4s;"></div>
     <div class="star" style="top:4%; left:44%; animation-delay:0.8s;"></div>
@@ -831,10 +829,6 @@
     <select id="yearFilter"><option value="">All years</option></select>
     <select id="filmFilter"><option value="">All films</option></select>
     <span class="count-tag"><b id="resultCount">0</b> songs showing</span>
-    <button class="export-btn" id="exportBtn" type="button" title="Download the songs currently showing as a CSV playlist">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Export playlist
-    </button>
   </div>
 </div>
 
@@ -973,7 +967,7 @@ const filmFilter = document.getElementById('filmFilter');
 const searchInput = document.getElementById('search');
 const resultsEl = document.getElementById('results');
 const resultCount = document.getElementById('resultCount');
-const exportBtn = document.getElementById('exportBtn');
+const exportBtn = document.getElementById('moonExport');
 let currentFiltered = [];
 const roleTabs = document.querySelectorAll('.role-tab');
 const browsePanel = document.getElementById('browsePanel');
